@@ -60,6 +60,8 @@ void static inline shiftOut(char num){
 	sleep_ms(1);
 }
 
+// Original Display function (commented out)
+/*
 void static inline Display(unsigned int num)
 {
     uint8_t digitEnable[] = {THOUSANDS,HUNDREDS,TENS,ONES};
@@ -71,7 +73,7 @@ void static inline Display(unsigned int num)
 	for(uint8_t i = 0; i < 4; i++){		 
 		digit = num / digitSelect[i];		//separate and select a digit
 		num -= digit * digitSelect[i];
-											// display the digit
+										// display the digit
 		gpio_put(digitEnable[i], false);	//enable digit
         		shiftOut(table[digit]);
 		sleep_ms(ON_TIME);
@@ -79,7 +81,42 @@ void static inline Display(unsigned int num)
 	}
 	sleep_ms(OFF_TIME);
 }
-int main(void)
+*/
+
+// Modified Display function with decimal point support
+// decimalPosition: 0-3 for which digit shows decimal (0=thousands, 1=hundreds, 2=tens, 3=ones)
+// Use 255 or 4+ for no decimal point
+void static inline Display(unsigned int num, uint8_t decimalPosition)
+{
+    uint8_t digitEnable[] = {THOUSANDS,HUNDREDS,TENS,ONES};
+    uint16_t digitSelect[]= {1000, 100, 10, 1};
+    unsigned char table[]=
+    {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,
+        0x77,0x7c,0x39,0x5e,0x79,0x71,0x00};	
+	int digit;
+	for(uint8_t i = 0; i < 4; i++){		 
+		digit = num / digitSelect[i];		//separate and select a digit
+		num -= digit * digitSelect[i];
+		
+		// Get the 7-segment pattern for this digit
+		unsigned char pattern = table[digit];
+		
+		// Set decimal point bit (0x80) if this is the decimal position
+		if (i == decimalPosition) {
+			pattern |= 0x80;  // Set bit 7 for decimal point
+		}
+		
+		// display the digit
+		gpio_put(digitEnable[i], false);	//enable digit
+        		shiftOut(pattern);
+		sleep_ms(ON_TIME);
+		gpio_put(digitEnable[i], 1);		//disable digit
+	}
+	sleep_ms(OFF_TIME);
+}
+
+
+int count_up_main(void)
 {
     uint count = 2715;
     uint32_t t1,t2;
@@ -101,7 +138,33 @@ int main(void)
             count = 0;
         }
 
-        Display(count);
+        Display(count, 2);  // Display with decimal point at tens place i.e. 27.15
     }
 }
 
+
+int main(void) //Count-down code for the other portion of the lab.
+{
+    uint count = 9999;
+    uint32_t t1,t2;
+    setup();
+    t1 = time_us_32();
+    while (1) 
+    {
+		if (count > 0000)
+        {
+            t2 = time_us_32();
+            if ((t2-t1) > 9999) //
+            {
+                count--; //decrement count
+                t1 = t2;
+            }
+        }
+        else
+        {
+            count = 9999;
+        }
+
+        Display(count, 2);  // Display with decimal point at tens place i.e. 99.99
+    }
+}
