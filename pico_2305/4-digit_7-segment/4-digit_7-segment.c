@@ -19,6 +19,8 @@
 #define TENS 2		//resistor->Four digit display 8 Low to enable
 #define ONES 3		//resistor->Four digit display 6 Low to enable
 
+#define TOGGLE_PIN 16 // GPIO used to toggle pull state inside main loop
+
 #define ON_TIME 2
 #define OFF_TIME 0
 
@@ -34,6 +36,11 @@ void setup() {
         gpio_set_dir(outputs[i],GPIO_OUT);
         gpio_put(outputs[i],initval[i]);
     }
+
+    // Initialize the toggle pin as an output (start low)
+    gpio_init(TOGGLE_PIN);
+    gpio_set_dir(TOGGLE_PIN, GPIO_OUT);
+    gpio_put(TOGGLE_PIN, false);
 }
 
 void static inline shiftOut(char num){
@@ -116,7 +123,7 @@ void static inline Display(unsigned int num, uint8_t decimalPosition)
 }
 
 
-int count_up_main(void)
+int cout_up_main(void)
 {
     uint count = 2715;
     uint32_t t1,t2;
@@ -124,6 +131,8 @@ int count_up_main(void)
     t1 = time_us_32();
     while (1) 
     {
+        // set the toggle pin HIGH at the start of the loop
+        //gpio_put(TOGGLE_PIN, true);
 		if (count < 9999)
         {
             t2 = time_us_32();
@@ -138,7 +147,10 @@ int count_up_main(void)
             count = 0;
         }
 
-        Display(count, 2);  // Display with decimal point at tens place i.e. 27.15
+        Display(count, 255);  // Display with decimal point at tens place i.e. 27.15
+
+        // set the toggle pin LOW at the end of the loop
+        //gpio_put(TOGGLE_PIN, false);
     }
 }
 
@@ -151,6 +163,8 @@ int main(void) //Count-down code for the other portion of the lab.
     t1 = time_us_32();
     while (1) 
     {
+        // set the toggle pin HIGH at the start of the loop
+        //gpio_put(TOGGLE_PIN, true);
 		if (count > 0000)
         {
             t2 = time_us_32();
@@ -165,6 +179,9 @@ int main(void) //Count-down code for the other portion of the lab.
             count = 9999;
         }
 
-        Display(count, 2);  // Display with decimal point at tens place i.e. 99.99
+        Display(count, 1);  // Display with decimal point at tens place i.e. 99.99
+
+        // set the toggle pin LOW at the end of the loop
+        //gpio_put(TOGGLE_PIN, false);
     }
 }
