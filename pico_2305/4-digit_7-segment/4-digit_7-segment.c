@@ -2,6 +2,8 @@
 
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "hardware/gpio.h"
+#include "hardware/timer.h"
 
 /*
  * FourDigitLEDTest.c
@@ -26,6 +28,7 @@
 
 #define ELEMENTS(x) (sizeof(x)/sizeof((x)[0]))
 
+volatile uint count = 9999;
 
 void setup() {
     const uint outputs[] = {LATCH, CLK, DATA, THOUSANDS, HUNDREDS, TENS, ONES};
@@ -123,7 +126,22 @@ void static inline Display(unsigned int num, uint8_t decimalPosition)
 }
 
 
-int cout_up_main(void)
+bool repeating_timer_callback(struct repeating_timer *t)
+{
+    // toggle a probe pin so the scope can see the timer firing
+    gpio_put(TOGGLE_PIN, !gpio_get(TOGGLE_PIN));
+
+    // only update the shared variable; do not touch the display or sleep here
+    if (count > 0u) {
+        count--;
+    } else {
+        count = 9999;
+    }
+
+    return true; // keep the timer repeating
+}
+
+int count_up_main(void)
 {
     uint count = 2715;
     uint32_t t1,t2;
@@ -131,8 +149,7 @@ int cout_up_main(void)
     t1 = time_us_32();
     while (1) 
     {
-        // set the toggle pin HIGH at the start of the loop
-        //gpio_put(TOGGLE_PIN, true);
+        gpio_put(TOGGLE_PIN, !gpio_get(TOGGLE_PIN));   
 		if (count < 9999)
         {
             t2 = time_us_32();
@@ -148,14 +165,11 @@ int cout_up_main(void)
         }
 
         Display(count, 255);  // Display with decimal point at tens place i.e. 27.15
-
-        // set the toggle pin LOW at the end of the loop
-        //gpio_put(TOGGLE_PIN, false);
     }
 }
 
 
-int main(void) //Count-down code for the other portion of the lab.
+int count_down_main(void) //Count-down code for the other portion of the lab.
 {
     uint count = 9999;
     uint32_t t1,t2;
@@ -163,8 +177,7 @@ int main(void) //Count-down code for the other portion of the lab.
     t1 = time_us_32();
     while (1) 
     {
-        // set the toggle pin HIGH at the start of the loop
-        //gpio_put(TOGGLE_PIN, true);
+        gpio_put(TOGGLE_PIN, !gpio_get(TOGGLE_PIN));
 		if (count > 0000)
         {
             t2 = time_us_32();
@@ -182,6 +195,28 @@ int main(void) //Count-down code for the other portion of the lab.
         Display(count, 1);  // Display with decimal point at tens place i.e. 99.99
 
         // set the toggle pin LOW at the end of the loop
-        //gpio_put(TOGGLE_PIN, false);
+    }
+}
+
+
+int main(void) // Count‑down using hardware timer for the counter
+{
+    setup();
+    stdio_init_all();
+
+    struct repeating_timer timer;
+
+    add_repeating_timer_ms(1, repeating_timer_callback, NULL, &timer); //decrease the count every 1ms
+
+    while (1)  //Updates the display in the main loop, but the count is updated in the timer callback
+    {
+        Display(count, 1);   // decimal point on hundreds place (99.99)
+        
+        // decreases the cpu usage since the display doesn't need to be updated as precisely
+        // This could be removed since the display function has a delay in it
+        // Having too large of a time would cause the display to flicker, I picked a low value for no particular reason.
+        // This could easily be set to 1 ms and it would work fine.
+        sleep_us(100); 
+
     }
 }
