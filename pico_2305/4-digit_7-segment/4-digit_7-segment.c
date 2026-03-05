@@ -148,8 +148,7 @@ int count_up_main(void)
     setup();
     t1 = time_us_32();
     while (1) 
-    {
-        gpio_put(TOGGLE_PIN, !gpio_get(TOGGLE_PIN));   
+    {  
 		if (count < 9999)
         {
             t2 = time_us_32();
@@ -157,13 +156,15 @@ int count_up_main(void)
             {
                 count++;
                 t1 = t2;
+                gpio_put(TOGGLE_PIN, !gpio_get(TOGGLE_PIN));
             }
         }
+    
         else
         {
             count = 0;
         }
-
+        
         Display(count, 255);  // Display with decimal point at tens place i.e. 27.15
     }
 }
