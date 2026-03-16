@@ -4,7 +4,8 @@
 #include "hardware/adc.h"
 
 //will need to use pin 28 for potentiometer input since it has an ADC
-#define ADC_PIN 26 //The SDK will need the ADC pin to be defined as 0 since the ADC pin is ADC0 on GPIO26
+#define ADC_GPIO_PIN 26 //The SDK will need the ADC pin to be defined as 0 since the ADC pin is ADC0 on GPIO26
+#define ADC_PIN 0
 #define SERVO_PIN 18
 
 
@@ -104,7 +105,7 @@ int servo_test_main()
     return 0;
 }
 
-int main()
+int ADC_Test_main()
 {
     stdio_init_all();
     printf("ADC Example, measuring GPIO26\n");
@@ -124,3 +125,32 @@ int main()
         sleep_ms(500);
     }
 }
+
+int main()
+{
+    stdio_init_all();
+    adc_init();
+
+    Servo s1;
+    ServoInit(&s1, SERVO_PIN, false); // Connect the servo signal wire SERVO_PIN
+    ServoOn(&s1);
+
+    adc_gpio_init(ADC_GPIO_PIN); // Initialize the ADC pin for input
+    adc_select_input(ADC_PIN); // GPIO26 is ADC input 0
+
+    while (1)
+    {
+        uint16_t potentiometer = adc_read(); // 12-bit ADC: 0..4095 (0x000..0xFFF)
+
+        // Map ADC range [0, 4095] to servo position [0, 100]
+        uint pos = (uint)((uint32_t)potentiometer * 100u / 4095u);
+
+        ServoPosition(&s1, pos);
+
+        // Optional: print values for debugging over USB serial
+        printf("ADC=0x%03x (%u), pos=%u\n", potentiometer, potentiometer, pos);
+        sleep_ms(20);
+    }
+}
+
+//The next todo item is adding in the LED colors.
