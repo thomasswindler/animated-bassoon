@@ -17,7 +17,7 @@ uint32_t pwm_set_freq_duty(uint slice_num, uint chan, uint32_t f, int d)
 
 uint32_t pwm_get_wrap(uint slice_num)
 {
-    valid_params_if(PWM, slice_num >= 0 && slice_num < NUM_PWM_SLICES);
+    // valid_params_if(PWM, slice_num >= 0 && slice_num < NUM_PWM_SLICES);
     return pwm_hw->slice[slice_num].top;
 }
 
@@ -84,16 +84,17 @@ void ServoPosition(Servo *s, uint p)
 int main()
 {
     Servo s1;
-    ServoInit(&s1, 20, false);
+    ServoInit(&s1, 18, false); // Connect the servo signal wire to GPIO 18
 
     ServoOn(&s1);
     while (true)
     {
         ServoPosition(&s1, 0);
-        sleep_ms(500);
+        sleep_ms(1000);
         ServoPosition(&s1, 100);
-        sleep_ms(500);
+        sleep_ms(1000);
     }
 
     return 0;
 }
+
