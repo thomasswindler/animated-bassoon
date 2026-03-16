@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/pwm.h"
+#include "hardware/adc.h"
+
+//will need to use pin 28 for potentiometer input since it has an ADC
+#define ADC_PIN 26 //The SDK will need the ADC pin to be defined as 0 since the ADC pin is ADC0 on GPIO26
+#define SERVO_PIN 18
+
 
 uint32_t pwm_set_freq_duty(uint slice_num, uint chan, uint32_t f, int d)
 {
@@ -81,10 +87,10 @@ void ServoPosition(Servo *s, uint p)
     pwm_set_dutyH(s->slice, s->chan, p * 10 + 250);
 }
 
-int main()
+int servo_test_main()
 {
     Servo s1;
-    ServoInit(&s1, 18, false); // Connect the servo signal wire to GPIO 18
+    ServoInit(&s1, SERVO_PIN, false); // Connect the servo signal wire to GPIO 18
 
     ServoOn(&s1);
     while (true)
@@ -98,3 +104,23 @@ int main()
     return 0;
 }
 
+int main()
+{
+    stdio_init_all();
+    printf("ADC Example, measuring GPIO26\n");
+
+    adc_init();
+
+    // Make sure GPIO is high-impedance, no pullups etc
+    adc_gpio_init(26);
+    // Select ADC input 0 (GPIO26)
+    adc_select_input(0);
+
+    while (1) {
+        // 12-bit conversion, assume max value == ADC_VREF == 3.3 V
+        const float conversion_factor = 3.3f / (1 << 12);
+        uint16_t result = adc_read();
+        printf("Raw value: 0x%03x, voltage: %f V\n", result, result * conversion_factor);
+        sleep_ms(500);
+    }
+}
