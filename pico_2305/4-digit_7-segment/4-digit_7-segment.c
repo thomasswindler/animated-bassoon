@@ -70,7 +70,7 @@ void static inline shiftOut(char num){
 	sleep_ms(1);
 }
 
-// Original Display function (commented out)
+//// Original Display function ////
 /*
 void static inline Display(unsigned int num)
 {
