@@ -48,7 +48,8 @@ pico_enable_stdio_usb(rainbow_servo 1)
 target_link_libraries(rainbow_servo
         pico_stdlib
         hardware_pwm
-        hardware_adc)
+        hardware_adc
+        hardware_pio)
 
 # Add the standard include files to the build
 target_include_directories(rainbow_servo PRIVATE
