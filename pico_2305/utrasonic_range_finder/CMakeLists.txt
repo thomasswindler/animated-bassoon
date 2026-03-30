@@ -46,7 +46,8 @@ pico_enable_stdio_usb(utrasonic_range_finder 1)
 
 # Add the standard library to the build
 target_link_libraries(utrasonic_range_finder
-        pico_stdlib)
+        pico_stdlib
+        hardware_pio)
 
 # Add the standard include files to the build
 target_include_directories(utrasonic_range_finder PRIVATE
