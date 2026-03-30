@@ -51,7 +51,7 @@ int main() {
     while (true) {
         // Ensure idle
         gpio_put(TRIG_PIN, 0);
-        sleep_us(5);
+        sleep_ms(2);      // longer settle
 
         // Send 10 µs pulse
         gpio_put(TRIG_PIN, 1);
