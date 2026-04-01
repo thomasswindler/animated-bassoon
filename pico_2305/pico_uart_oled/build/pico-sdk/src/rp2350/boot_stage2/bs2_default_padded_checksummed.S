@@ -1,4 +1,4 @@
-// Padded and checksummed version of: /home/mech/projects/pico_uart_oled/build/pico-sdk/src/rp2350/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: /home/mech/projects/animated-bassoon/pico_2305/pico_uart_oled/build/pico-sdk/src/rp2350/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

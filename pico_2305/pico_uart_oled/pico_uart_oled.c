@@ -52,11 +52,27 @@ int main(void) {
         if (cur != last_btn_state) {
             debounce_deadline = make_timeout_time_ms(BUTTON_DEBOUNCE_MS);
             last_btn_state = cur;
-        } else if (!cur && time_reached(debounce_deadline)) {
+        } else 
+            if (!cur && time_reached(debounce_deadline)) {
+                // Print message without clearing screen
+                for (const char *p = BUTTON_MSG; *p; ++p) {
+                    textui_putc(*p);
+                    uart_putc(UART_ID, *p);
+                }
+                textui_putc('\n');
+                uart_putc(UART_ID, '\r');
+                uart_putc(UART_ID, '\n');
+                textui_render();
+                while (!gpio_get(BUTTON_PIN)) tight_loop_contents();
+                sleep_ms(50);
+            }
+            /*
+            if (!cur && time_reached(debounce_deadline)) {
             show_and_print(BUTTON_MSG);
             while (!gpio_get(BUTTON_PIN)) tight_loop_contents();
             sleep_ms(50);
-        }
+            }*/
+        
 
         // UART echo + render
         if (uart_is_readable(UART_ID)) {
