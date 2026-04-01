@@ -23,12 +23,12 @@ int main(void) {
     // I2C
     i2c_init(I2C_PORT, I2C_CLK_KHZ * 1000);
 
-    #if defined(PICO_DEFAULT_I2C_SDA_PIN)
-        gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
-        gpio_set_function(PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C);
-        gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
-        gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
-    #endif
+#if defined(PICO_DEFAULT_I2C_SDA_PIN)
+    gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
+    gpio_set_function(PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C);
+    gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
+    gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
+#endif
 
     // Button
     gpio_init(BUTTON_PIN);
@@ -43,47 +43,89 @@ int main(void) {
     textui_putc('>');
     textui_render();
 
-    bool last_btn_state = true;                // pull-up => true = not pressed
-    absolute_time_t debounce_deadline = nil_time;
+    // --- Button Logic Variables ---
+    bool last_btn_state = true; // true = not pressed (pull-up)
+    absolute_time_t press_start_time = nil_time;
+    bool is_waiting_for_release = false; // Tracks if we are in a "wait for release" state
+    const int LONG_PRESS_MS = 1000;
 
     while (true) {
-        // Button debounce
         bool cur = gpio_get(BUTTON_PIN);
-        if (cur != last_btn_state) {
-            debounce_deadline = make_timeout_time_ms(BUTTON_DEBOUNCE_MS);
-            last_btn_state = cur;
-        } else 
-            if (!cur && time_reached(debounce_deadline)) {
-                for (const char *p = BUTTON_MSG; *p; ++p) {
-                    textui_putc(*p);
-                    uart_putc(UART_ID, *p);
-                }
-                printf("%s\n", BUTTON_MSG);
-                textui_putc('\n');
-                uart_putc(UART_ID, '\r');
-                uart_putc(UART_ID, '\n');
-                textui_render();
-                while (!gpio_get(BUTTON_PIN))
-                    tight_loop_contents();
-                sleep_ms(50);
-            }
-            /*
-            if (!cur && time_reached(debounce_deadline)) {
-            show_and_print(BUTTON_MSG);
-            while (!gpio_get(BUTTON_PIN)) tight_loop_contents();
-            sleep_ms(50);
-            }*/
-        
 
-        // UART echo + render
+        // 1. Detect State Change (Edge Detection)
+        if (cur != last_btn_state) {
+            // State Changed
+            
+            if (!cur) { 
+                // Button JUST Pressed (Transition: High -> Low)
+                press_start_time = get_absolute_time();
+                is_waiting_for_release = false;
+            } 
+            else { 
+                // Button JUST Released (Transition: Low -> High)
+                
+                // Calculate how long it was held
+                uint64_t duration_us = absolute_time_diff_us(press_start_time, get_absolute_time());
+                int duration_ms = (int)(duration_us / 1000);
+
+                if (duration_ms >= LONG_PRESS_MS) {
+                    // It was a Long Press (already handled in the loop below, but just in case)
+                    // We rely on the 'is_waiting_for_release' flag to prevent double action
+                } else {
+                    // It was a Short Press!
+                    // Perform Short Press Action
+                    for (const char *p = BUTTON_MSG; *p; ++p) {
+                        textui_putc(*p);
+                        uart_putc(UART_ID, *p);
+                    }
+                    printf("%s\n", BUTTON_MSG);
+                    textui_putc('\n');
+                    uart_putc(UART_ID, '\r');
+                    uart_putc(UART_ID, '\n');
+                    textui_render();
+                }
+                
+                // Reset state
+                is_waiting_for_release = false;
+            }
+            last_btn_state = cur;
+            sleep_ms(BUTTON_DEBOUNCE_MS); // Debounce delay after state change
+        }
+
+        // 2. Handle Pressed State (While Button is Held)
+        if (!cur && !is_waiting_for_release) {
+            // Button is currently held down
+            uint64_t duration_us = absolute_time_diff_us(press_start_time, get_absolute_time());
+            int duration_ms = (int)(duration_us / 1000);
+
+            if (duration_ms >= LONG_PRESS_MS) {
+                // LONG PRESS TRIGGERED
+                show_and_print("Clearing"); // Clear display
+                sleep_ms(500); // Brief pause to show message
+                show_and_print(0); // Clear message (and display)
+                is_waiting_for_release = true; // Enter "Wait for Release" mode
+                
+                // Wait for the button to be released
+                while (!gpio_get(BUTTON_PIN)) {
+                    tight_loop_contents();
+                }
+                sleep_ms(50); // Debounce release
+                // Loop continues, 'cur' will be read as High next iteration
+            }
+        }
+
+        // 3. UART Echo
         if (uart_is_readable(UART_ID)) {
             int ch = uart_getc(UART_ID);
-            uart_putc(UART_ID, (char)ch);
-            textui_putc((char)ch);
-            textui_render();
-            printf("%c", (char)ch);
+            if (ch >= 0) {
+                uart_putc(UART_ID, (char)ch);
+                textui_putc((char)ch);
+                textui_render();
+            }
         } else {
             tight_loop_contents();
         }
     }
+
+    return 0;
 }
