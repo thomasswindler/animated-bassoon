@@ -23,12 +23,12 @@ int main(void) {
     // I2C
     i2c_init(I2C_PORT, I2C_CLK_KHZ * 1000);
 
-#if defined(PICO_DEFAULT_I2C_SDA_PIN)
-    gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
-    gpio_set_function(PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C);
-    gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
-    gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
-#endif
+    #if defined(PICO_DEFAULT_I2C_SDA_PIN)
+        gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
+        gpio_set_function(PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C);
+        gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
+        gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
+    #endif
 
     // Button
     gpio_init(BUTTON_PIN);
