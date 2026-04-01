@@ -17,12 +17,14 @@ static void ssd1306_send_cmd(uint8_t cmd) {
 }
 
 static void ssd1306_send_cmds(const uint8_t *cmds, int n) {
-    for (int i = 0; i < n; ++i) ssd1306_send_cmd(cmds[i]);
+    for (int i = 0; i < n; ++i)
+        ssd1306_send_cmd(cmds[i]);
 }
 
 static void ssd1306_send_buf(const uint8_t *buf_in, int len) {
     uint8_t *tmp = (uint8_t *)malloc((size_t)len + 1);
-    if (!tmp) return;
+    if (!tmp)
+        return;
     tmp[0] = 0x40;
     memcpy(tmp + 1, buf_in, (size_t)len);
     i2c_write_blocking(I2C_PORT, SSD1306_I2C_ADDR, tmp, len + 1, false);

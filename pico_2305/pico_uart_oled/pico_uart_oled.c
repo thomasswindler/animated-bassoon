@@ -4,12 +4,12 @@
 #include "hardware/gpio.h"
 #include "hardware/i2c.h"
 
-#include "config.h"             // Project configuration: pins, baud rate, I2C params, SSD1306 geometry, button debounce
-#include "ssd1306.h"            // SSD1306 display driver API: init/update/clear + framebuffer accessors
-#include "text_ui.h"            // Text UI layer: text buffer, putc/newline/backspace handling, render text to SSD1306
-#include "app.h"                // App-level helper(s): show_and_print() (display message + also print it over UART)
+#include "config.h"   // Project configuration: pins, baud rate, I2C params, SSD1306 geometry, button debounce
+#include "ssd1306.h"  // SSD1306 display driver API: init/update/clear + framebuffer accessors
+#include "text_ui.h"  // Text UI layer: text buffer, putc/newline/backspace handling, render text to SSD1306
+#include "app.h"      // App-level helper(s): show_and_print() (display message + also print it over UART)
 
-static const char *BUTTON_MSG = "Hello There";
+static const char *BUTTON_MSG = "Hello there";
 
 int main(void) {
     stdio_init_all();
@@ -63,7 +63,8 @@ int main(void) {
                 uart_putc(UART_ID, '\r');
                 uart_putc(UART_ID, '\n');
                 textui_render();
-                while (!gpio_get(BUTTON_PIN)) tight_loop_contents();
+                while (!gpio_get(BUTTON_PIN))
+                    tight_loop_contents();
                 sleep_ms(50);
             }
             /*

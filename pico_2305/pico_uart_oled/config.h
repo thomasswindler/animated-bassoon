@@ -19,4 +19,4 @@
 
 // --- Button ---
 #define BUTTON_PIN          14
-#define BUTTON_DEBOUNCE_MS  50
+#define BUTTON_DEBOUNCE_MS  10
