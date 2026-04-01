@@ -3,6 +3,8 @@
 #include "hardware/uart.h"
 #include "hardware/gpio.h"
 #include "hardware/i2c.h"
+#include "hardware/clocks.h"
+
 
 #include "config.h"   // Project configuration: pins, baud rate, I2C params, SSD1306 geometry, button debounce
 #include "ssd1306.h"  // SSD1306 display driver API: init/update/clear + framebuffer accessors
@@ -11,8 +13,12 @@
 
 static const char *BUTTON_MSG = "Hello there";
 
+
 int main(void) {
     stdio_init_all();
+
+    set_sys_clock_hz(125000000u, true);
+    sleep_ms(10);
 
     // UART
     uart_init(UART_ID, UART_BAUD);
@@ -37,6 +43,7 @@ int main(void) {
 
     // Display/UI
     ssd1306_init();
+    sleep_ms(100);
     textui_init();
     ssd1306_clear();
 

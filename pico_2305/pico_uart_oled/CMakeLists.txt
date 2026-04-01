@@ -52,7 +52,8 @@ target_link_libraries(pico_uart_oled
         pico_stdlib
         hardware_uart
         hardware_i2c
-        hardware_gpio)
+        hardware_gpio
+        hardware_clocks)
 
 # Add the standard include files to the build
 target_include_directories(pico_uart_oled PRIVATE
