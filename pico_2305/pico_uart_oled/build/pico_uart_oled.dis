@@ -41,19 +41,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  18 .debug_abbrev 00009d96  00000000  00000000  000421ef  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_loclists 0001b381  00000000  00000000  0004bf85  2**0
+ 19 .debug_loclists 0001b37f  00000000  00000000  0004bf85  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  20 .debug_aranges 00001340  00000000  00000000  00067308  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  21 .debug_rnglists 00004bcc  00000000  00000000  00068648  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line   000241da  00000000  00000000  0006d214  2**0
+ 22 .debug_line   0002402c  00000000  00000000  0006d214  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_str    00009bda  00000000  00000000  000913ee  2**0
+ 23 .debug_str    00009bda  00000000  00000000  00091240  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .debug_frame  00003960  00000000  00000000  0009afc8  2**2
+ 24 .debug_frame  00003960  00000000  00000000  0009ae1c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 25 .debug_line_str 00000169  00000000  00000000  0009e928  2**0
+ 25 .debug_line_str 00000169  00000000  00000000  0009e77c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 /home/mech/projects/animated-bassoon/pico_2305/pico_uart_oled/build/pico_uart_oled.elf:     file format elf32-littlearm
@@ -343,7 +343,7 @@ Disassembly of section .text:
 100002da:	f403 4380 	and.w	r3, r3, #16384	@ 0x4000
 100002de:	d02c      	beq.n	1000033a <main+0x106>
 100002e0:	f001 fa08 	bl	100016f4 <time_us_64>
-100002e4:	f24c 3350 	movw	r3, #50000	@ 0xc350
+100002e4:	f242 7310 	movw	r3, #10000	@ 0x2710
 100002e8:	f04f 3cff 	mov.w	ip, #4294967295	@ 0xffffffff
 100002ec:	f06f 4200 	mvn.w	r2, #2147483648	@ 0x80000000
 100002f0:	18c5      	adds	r5, r0, r3

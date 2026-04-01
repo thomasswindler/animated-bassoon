@@ -9,7 +9,7 @@
 #include "text_ui.h"            // Text UI layer: text buffer, putc/newline/backspace handling, render text to SSD1306
 #include "app.h"                // App-level helper(s): show_and_print() (display message + also print it over UART)
 
-static const char *BUTTON_MSG = "Hello There";
+static const char *BUTTON_MSG = "Hello there";
 
 int main(void) {
     stdio_init_all();
@@ -63,7 +63,8 @@ int main(void) {
                 uart_putc(UART_ID, '\r');
                 uart_putc(UART_ID, '\n');
                 textui_render();
-                while (!gpio_get(BUTTON_PIN)) tight_loop_contents();
+                while (!gpio_get(BUTTON_PIN))
+                    tight_loop_contents();
                 sleep_ms(50);
             }
             /*
