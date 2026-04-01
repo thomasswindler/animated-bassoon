@@ -269,3 +269,13 @@
 234	339	1775056530019987733	/home/mech/projects/animated-bassoon/pico_2305/pico_uart_oled/build/pico_uart_oled.hex	df7f3acf9040cce
 234	339	1775056530019987733	/home/mech/projects/animated-bassoon/pico_2305/pico_uart_oled/build/pico_uart_oled.bin	df7f3acf9040cce
 234	339	1775056530019987733	/home/mech/projects/animated-bassoon/pico_2305/pico_uart_oled/build/pico_uart_oled.uf2	df7f3acf9040cce
+11	199	1775056899833178656	CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o	a507084e12925de6
+200	282	1775056900101181671	pico_uart_oled.elf	df7f3acf9040cce
+200	282	1775056900101181671	pico_uart_oled.dis	df7f3acf9040cce
+200	282	1775056900101181671	pico_uart_oled.hex	df7f3acf9040cce
+200	282	1775056900101181671	pico_uart_oled.bin	df7f3acf9040cce
+200	282	1775056900101181671	pico_uart_oled.uf2	df7f3acf9040cce
+200	282	1775056900101181671	/home/mech/projects/animated-bassoon/pico_2305/pico_uart_oled/build/pico_uart_oled.dis	df7f3acf9040cce
+200	282	1775056900101181671	/home/mech/projects/animated-bassoon/pico_2305/pico_uart_oled/build/pico_uart_oled.hex	df7f3acf9040cce
+200	282	1775056900101181671	/home/mech/projects/animated-bassoon/pico_2305/pico_uart_oled/build/pico_uart_oled.bin	df7f3acf9040cce
+200	282	1775056900101181671	/home/mech/projects/animated-bassoon/pico_2305/pico_uart_oled/build/pico_uart_oled.uf2	df7f3acf9040cce

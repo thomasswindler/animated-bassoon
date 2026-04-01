@@ -54,11 +54,11 @@ int main(void) {
             last_btn_state = cur;
         } else 
             if (!cur && time_reached(debounce_deadline)) {
-                // Print message without clearing screen
                 for (const char *p = BUTTON_MSG; *p; ++p) {
                     textui_putc(*p);
                     uart_putc(UART_ID, *p);
                 }
+                printf("%s\n", BUTTON_MSG);
                 textui_putc('\n');
                 uart_putc(UART_ID, '\r');
                 uart_putc(UART_ID, '\n');
@@ -81,6 +81,7 @@ int main(void) {
             uart_putc(UART_ID, (char)ch);
             textui_putc((char)ch);
             textui_render();
+            printf("%c", (char)ch);
         } else {
             tight_loop_contents();
         }

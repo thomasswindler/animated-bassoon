@@ -2750,7 +2750,7 @@ LOAD /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.
 .flash_begin    0x10000000        0x0
                 0x10000000                        __flash_binary_start = .
 
-.text           0x10000000     0x5500
+.text           0x10000000     0x5510
                 0x10000000                        __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000000      0x124 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
@@ -2845,586 +2845,585 @@ LOAD /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.
  .text.frame_dummy
                 0x10000210       0x24 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
  .text.startup.main
-                0x10000234      0x1c4 CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
+                0x10000234      0x1d8 CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
                 0x10000234                main
  .text.ssd1306_init
-                0x100003f8       0x58 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
-                0x100003f8                ssd1306_init
+                0x1000040c       0x58 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+                0x1000040c                ssd1306_init
  .text.ssd1306_update
-                0x10000450       0x80 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
-                0x10000450                ssd1306_update
+                0x10000464       0x80 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+                0x10000464                ssd1306_update
  .text.ssd1306_clear
-                0x100004d0       0x1c CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
-                0x100004d0                ssd1306_clear
+                0x100004e4       0x1c CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+                0x100004e4                ssd1306_clear
  .text.ssd1306_fb
-                0x100004ec        0x8 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
-                0x100004ec                ssd1306_fb
+                0x10000500        0x8 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+                0x10000500                ssd1306_fb
  .text.ssd1306_fb_len
-                0x100004f4        0x8 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
-                0x100004f4                ssd1306_fb_len
+                0x10000508        0x8 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+                0x10000508                ssd1306_fb_len
  .text.textui_init
-                0x100004fc       0x60 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
-                0x100004fc                textui_init
+                0x10000510       0x60 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
+                0x10000510                textui_init
  .text.textui_putc
-                0x1000055c      0x200 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
-                0x1000055c                textui_putc
+                0x10000570      0x200 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
+                0x10000570                textui_putc
  .text.textui_render
-                0x1000075c       0xb0 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
-                0x1000075c                textui_render
+                0x10000770       0xb0 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
+                0x10000770                textui_render
  .text.gpio_set_function
-                0x1000080c       0x3c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
-                0x1000080c                gpio_set_function
+                0x10000820       0x3c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x10000820                gpio_set_function
  .text.gpio_set_pulls
-                0x10000848       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
-                0x10000848                gpio_set_pulls
+                0x1000085c       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x1000085c                gpio_set_pulls
  .text.gpio_init
-                0x10000870       0x48 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
-                0x10000870                gpio_init
- .text.panic    0x100008b8       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
-                0x100008b8                panic
+                0x10000884       0x48 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x10000884                gpio_init
+ .text.panic    0x100008cc       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+                0x100008cc                panic
  .text.hw_claim_or_assert
-                0x100008e8       0x58 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
-                0x100008e8                hw_claim_or_assert
+                0x100008fc       0x58 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x100008fc                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x10000940       0x80 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
-                0x10000940                hw_claim_unused_from_range
+                0x10000954       0x80 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x10000954                hw_claim_unused_from_range
  .text.next_striped_spin_lock_num
-                0x100009c0       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
-                0x100009c0                next_striped_spin_lock_num
+                0x100009d4       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+                0x100009d4                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x100009d8       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
-                0x100009d8                spin_lock_claim_unused
+                0x100009ec       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+                0x100009ec                spin_lock_claim_unused
  .text.spinlock_set_extexclall
-                0x100009f8       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x10000a0c       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
  .text.spin_locks_reset
-                0x10000a08       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
-                0x10000a08                spin_locks_reset
+                0x10000a1c       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x10000a1c                spin_locks_reset
  .text.runtime_init_per_core_irq_priorities
-                0x10000a20       0x40 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000a20                runtime_init_per_core_irq_priorities
+                0x10000a34       0x40 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000a34                runtime_init_per_core_irq_priorities
  .text.irq_set_enabled
-                0x10000a60       0x2c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000a60                irq_set_enabled
+                0x10000a74       0x2c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000a74                irq_set_enabled
  .text.irq_is_enabled
-                0x10000a8c       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000a8c                irq_is_enabled
+                0x10000aa0       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000aa0                irq_is_enabled
  .text.irq_set_pending
-                0x10000aac       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000aac                irq_set_pending
+                0x10000ac0       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000ac0                irq_set_pending
  .text.irq_has_shared_handler
-                0x10000ac4       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000ac4                irq_has_shared_handler
+                0x10000ad8       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000ad8                irq_has_shared_handler
  .text.irq_set_exclusive_handler
-                0x10000ae4       0x60 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000ae4                irq_set_exclusive_handler
+                0x10000af8       0x60 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000af8                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x10000b44      0x1e8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000b44                irq_add_shared_handler
+                0x10000b58      0x1e8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000b58                irq_add_shared_handler
  .text.irq_add_tail_to_free_list
-                0x10000d2c       0xbc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000d2c                irq_add_tail_to_free_list
+                0x10000d40       0xbc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000d40                irq_add_tail_to_free_list
  .text.user_irq_claim_unused
-                0x10000de8       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000de8                user_irq_claim_unused
+                0x10000dfc       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000dfc                user_irq_claim_unused
  .text.lock_init
-                0x10000e10        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
-                0x10000e10                lock_init
+                0x10000e24        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+                0x10000e24                lock_init
  .text.runtime_init_mutex
-                0x10000e1c       0x4c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
-                0x10000e1c                runtime_init_mutex
+                0x10000e30       0x4c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x10000e30                runtime_init_mutex
  .text.mutex_init
-                0x10000e68       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
-                0x10000e68                mutex_init
+                0x10000e7c       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x10000e7c                mutex_init
  .text.critical_section_init
-                0x10000e84       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
-                0x10000e84                critical_section_init
+                0x10000e98       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
+                0x10000e98                critical_section_init
  .text.critical_section_init_with_lock_num
-                0x10000ea0       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
-                0x10000ea0                critical_section_init_with_lock_num
+                0x10000eb4       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
+                0x10000eb4                critical_section_init_with_lock_num
  .text.sleep_until_callback
-                0x10000eb0       0x3c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- *fill*         0x10000eec        0x4 
+                0x10000ec4       0x3c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
  .text.alarm_pool_irq_handler
-                0x10000ef0      0x2f0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x10000f00      0x2f0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
  .text.runtime_init_default_alarm_pool
-                0x100011e0      0x100 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x100011e0                runtime_init_default_alarm_pool
+                0x100011f0      0x100 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x100011f0                runtime_init_default_alarm_pool
  .text.alarm_pool_get_default
-                0x100012e0        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x100012e0                alarm_pool_get_default
+                0x100012f0        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x100012f0                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x100012e8       0xdc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x100012e8                alarm_pool_add_alarm_at
+                0x100012f8       0xdc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x100012f8                alarm_pool_add_alarm_at
  .text.alarm_pool_add_alarm_at_force_in_context
-                0x100013c4       0xc8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x100013c4                alarm_pool_add_alarm_at_force_in_context
+                0x100013d4       0xc8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x100013d4                alarm_pool_add_alarm_at_force_in_context
  .text.alarm_pool_cancel_alarm
-                0x1000148c       0x80 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x1000148c                alarm_pool_cancel_alarm
+                0x1000149c       0x80 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x1000149c                alarm_pool_cancel_alarm
  .text.alarm_pool_core_num
-                0x1000150c        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x1000150c                alarm_pool_core_num
+                0x1000151c        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x1000151c                alarm_pool_core_num
  .text.sleep_ms
-                0x10001510       0xdc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x10001510                sleep_ms
+                0x10001520       0xdc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x10001520                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x100015ec       0xd4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x100015ec                best_effort_wfe_or_timeout
+                0x100015fc       0xd4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x100015fc                best_effort_wfe_or_timeout
  .text.timer_hardware_alarm_claim
-                0x100016c0       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
-                0x100016c0                timer_hardware_alarm_claim
+                0x100016d0       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x100016d0                timer_hardware_alarm_claim
  .text.timer_time_us_64
-                0x100016e4       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
-                0x100016e4                timer_time_us_64
+                0x100016f4       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x100016f4                timer_time_us_64
  .text.time_us_64
-                0x100016f4       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
-                0x100016f4                time_us_64
+                0x10001704       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x10001704                time_us_64
  .text.busy_wait_us
-                0x10001708       0x5c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
-                0x10001708                busy_wait_us
+                0x10001718       0x5c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x10001718                busy_wait_us
  .text.busy_wait_until
-                0x10001764       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
-                0x10001764                busy_wait_until
+                0x10001774       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x10001774                busy_wait_until
  .text.uart_init
-                0x10001788      0x104 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
-                0x10001788                uart_init
+                0x10001798      0x104 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
+                0x10001798                uart_init
  .text.uart_set_format
-                0x1000188c       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
-                0x1000188c                uart_set_format
+                0x1000189c       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
+                0x1000189c                uart_set_format
  .text.clock_configure_undivided
-                0x100018fc       0xd0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
-                0x100018fc                clock_configure_undivided
+                0x1000190c       0xd0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+                0x1000190c                clock_configure_undivided
  .text.clock_get_hz
-                0x100019cc        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
-                0x100019cc                clock_get_hz
+                0x100019dc        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+                0x100019dc                clock_get_hz
  .text.pll_init
-                0x100019d8       0x8c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
-                0x100019d8                pll_init
+                0x100019e8       0x8c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+                0x100019e8                pll_init
  .text.watchdog_reboot
-                0x10001a64       0x98 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
-                0x10001a64                watchdog_reboot
+                0x10001a74       0x98 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
+                0x10001a74                watchdog_reboot
  .text.tick_start
-                0x10001afc       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
-                0x10001afc                tick_start
+                0x10001b0c       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+                0x10001b0c                tick_start
  .text.rom_reboot.constprop.0.isra.0
-                0x10001b14       0x34 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x10001b24       0x34 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
  .text.rom_func_lookup
-                0x10001b48       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
-                0x10001b48                rom_func_lookup
+                0x10001b58       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x10001b58                rom_func_lookup
  .text.rom_reset_usb_boot_extra
-                0x10001b60       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
-                0x10001b60                rom_reset_usb_boot_extra
+                0x10001b70       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x10001b70                rom_reset_usb_boot_extra
  .text.runtime_init_bootrom_locking_enable
-                0x10001b7c       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
-                0x10001b7c                runtime_init_bootrom_locking_enable
+                0x10001b8c       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+                0x10001b8c                runtime_init_bootrom_locking_enable
  .text.runtime_init_boot_locks_reset
-                0x10001b90       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
-                0x10001b90                runtime_init_boot_locks_reset
+                0x10001ba0       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+                0x10001ba0                runtime_init_boot_locks_reset
  .text.xosc_init
-                0x10001bac       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
-                0x10001bac                xosc_init
+                0x10001bbc       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+                0x10001bbc                xosc_init
  .text.first_per_core_initializer
-                0x10001bdc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x10001bec        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
  .text.hard_assertion_failure
-                0x10001be0        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
-                0x10001be0                hard_assertion_failure
+                0x10001bf0        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x10001bf0                hard_assertion_failure
  .text.runtime_run_initializers
-                0x10001bec       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
-                0x10001bec                runtime_run_initializers
+                0x10001bfc       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x10001bfc                runtime_run_initializers
  .text.runtime_init_early_resets
-                0x10001c0c       0x34 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001c0c                runtime_init_early_resets
+                0x10001c1c       0x34 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001c1c                runtime_init_early_resets
  .text.runtime_init_usb_power_down
-                0x10001c40       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001c40                runtime_init_usb_power_down
+                0x10001c50       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001c50                runtime_init_usb_power_down
  .text.runtime_init_per_core_enable_coprocessors
-                0x10001c5c       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001c5c                runtime_init_per_core_enable_coprocessors
+                0x10001c6c       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001c6c                runtime_init_per_core_enable_coprocessors
  .text.runtime_init_post_clock_resets
-                0x10001c78       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001c78                runtime_init_post_clock_resets
+                0x10001c88       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001c88                runtime_init_post_clock_resets
  .text.runtime_init_bootrom_reset
-                0x10001c98       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001c98                runtime_init_bootrom_reset
+                0x10001ca8       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001ca8                runtime_init_bootrom_reset
  .text.runtime_init_per_core_bootrom_reset
-                0x10001cac       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001cac                runtime_init_per_core_bootrom_reset
+                0x10001cbc       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001cbc                runtime_init_per_core_bootrom_reset
  .text.runtime_init_spin_locks_reset
-                0x10001cc0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001cc0                runtime_init_spin_locks_reset
+                0x10001cd0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001cd0                runtime_init_spin_locks_reset
  .text.runtime_init_install_ram_vector_table
-                0x10001cc4       0x68 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001cc4                runtime_init_install_ram_vector_table
+                0x10001cd4       0x68 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001cd4                runtime_init_install_ram_vector_table
  .text.runtime_init_clocks
-                0x10001d2c       0xdc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
-                0x10001d2c                runtime_init_clocks
+                0x10001d3c       0xdc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+                0x10001d3c                runtime_init_clocks
  .text.__wrap_malloc
-                0x10001e08       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
-                0x10001e08                __wrap_malloc
+                0x10001e18       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+                0x10001e18                __wrap_malloc
  .text.__wrap_free
-                0x10001e2c        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
-                0x10001e2c                __wrap_free
+                0x10001e3c        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+                0x10001e3c                __wrap_free
  .text._out_char
-                0x10001e30        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+                0x10001e40        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
  .text.weak_raw_vprintf
-                0x10001e38       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
-                0x10001e38                weak_raw_vprintf
- .text._exit    0x10001e68        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-                0x10001e68                _exit
- .text._sbrk    0x10001e6c       0x2c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-                0x10001e6c                _sbrk
- .text.exit     0x10001e98        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-                0x10001e98                exit
+                0x10001e48       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+                0x10001e48                weak_raw_vprintf
+ .text._exit    0x10001e78        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x10001e78                _exit
+ .text._sbrk    0x10001e7c       0x2c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x10001e7c                _sbrk
+ .text.exit     0x10001ea8        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x10001ea8                exit
  .text.runtime_init
-                0x10001ea0       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-                0x10001ea0                runtime_init
+                0x10001eb0       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x10001eb0                runtime_init
  .text.stdio_out_chars_no_crlf
-                0x10001ec4        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x10001ed4        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
  .text.stdio_out_chars_crlf
-                0x10001ecc       0xb0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x10001edc       0xb0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
  .text.stdio_put_string
-                0x10001f7c       0xec CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
-                0x10001f7c                stdio_put_string
+                0x10001f8c       0xec CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x10001f8c                stdio_put_string
  .text.stdio_set_driver_enabled
-                0x10002068       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
-                0x10002068                stdio_set_driver_enabled
+                0x10002078       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x10002078                stdio_set_driver_enabled
  .text.stdio_init_all
-                0x10002090        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
-                0x10002090                stdio_init_all
+                0x100020a0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x100020a0                stdio_init_all
  .text.__wrap_putchar
-                0x10002094       0x84 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
-                0x10002094                stdio_putchar
-                0x10002094                __wrap_putchar
+                0x100020a4       0x84 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x100020a4                stdio_putchar
+                0x100020a4                __wrap_putchar
  .text.__wrap_puts
-                0x10002118       0x3c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
-                0x10002118                __wrap_puts
-                0x10002118                stdio_puts
+                0x10002128       0x3c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x10002128                __wrap_puts
+                0x10002128                stdio_puts
  .text.resetd_init
-                0x10002154        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x10002164        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
  .text.resetd_reset
-                0x10002158        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x10002168        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
  .text.resetd_open
-                0x10002164       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x10002174       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
  .text.resetd_xfer_cb
-                0x1000218c        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x1000219c        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
  .text.resetd_control_xfer_cb
-                0x10002190       0x50 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x100021a0       0x50 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
  .text.tud_descriptor_bos_cb
-                0x100021e0        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
-                0x100021e0                tud_descriptor_bos_cb
+                0x100021f0        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x100021f0                tud_descriptor_bos_cb
  .text.tud_vendor_control_xfer_cb
-                0x100021e8       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
-                0x100021e8                tud_vendor_control_xfer_cb
+                0x100021f8       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x100021f8                tud_vendor_control_xfer_cb
  .text.usbd_app_driver_get_cb
-                0x10002210       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
-                0x10002210                usbd_app_driver_get_cb
+                0x10002220       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x10002220                usbd_app_driver_get_cb
  .text.tud_cdc_line_coding_cb
-                0x10002220       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
-                0x10002220                tud_cdc_line_coding_cb
+                0x10002230       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x10002230                tud_cdc_line_coding_cb
  .text.stdio_usb_set_chars_available_callback
-                0x10002238       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
-                0x10002238                stdio_usb_set_chars_available_callback
+                0x10002248       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x10002248                stdio_usb_set_chars_available_callback
  .text.timer_task
-                0x1000224c       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .text.usb_irq  0x100022bc        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x1000225c       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .text.usb_irq  0x100022cc        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
  .text.stdio_usb_in_chars
-                0x100022c8       0x88 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
-                0x100022c8                stdio_usb_in_chars
+                0x100022d8       0x88 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x100022d8                stdio_usb_in_chars
  .text.stdio_usb_out_flush
-                0x10002350       0x54 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x10002360       0x54 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
  .text.stdio_usb_out_chars
-                0x100023a4       0xf4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x100023b4       0xf4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
  .text.low_priority_worker_irq
-                0x10002498       0xd8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x100024a8       0xd8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
  .text.stdio_usb_init
-                0x10002570       0xe8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
-                0x10002570                stdio_usb_init
+                0x10002580       0xe8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x10002580                stdio_usb_init
  .text.tud_descriptor_device_cb
-                0x10002658        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
-                0x10002658                tud_descriptor_device_cb
+                0x10002668        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+                0x10002668                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x10002660        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
-                0x10002660                tud_descriptor_configuration_cb
+                0x10002670        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+                0x10002670                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x10002668       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
-                0x10002668                tud_descriptor_string_cb
+                0x10002678       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+                0x10002678                tud_descriptor_string_cb
  .text.startup._retrieve_unique_id_on_boot
-                0x100026d8       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
+                0x100026e8       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
  .text.pico_get_unique_board_id_string
-                0x10002708      0x184 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
-                0x10002708                pico_get_unique_board_id_string
+                0x10002718      0x184 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
+                0x10002718                pico_get_unique_board_id_string
  .text.dcd_init
-                0x1000288c       0x8c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x1000288c                dcd_init
+                0x1000289c       0x8c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x1000289c                dcd_init
  .text.dcd_int_enable
-                0x10002918        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10002918                dcd_int_enable
+                0x10002928        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10002928                dcd_int_enable
  .text.dcd_set_address
-                0x10002920       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10002920                dcd_set_address
+                0x10002930       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10002930                dcd_set_address
  .text.dcd_sof_enable
-                0x10002930       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10002930                dcd_sof_enable
+                0x10002940       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10002940                dcd_sof_enable
  .text.dcd_edpt0_status_complete
-                0x1000294c       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x1000294c                dcd_edpt0_status_complete
+                0x1000295c       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x1000295c                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x10002968      0x104 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10002968                dcd_edpt_open
+                0x10002978      0x104 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10002978                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x10002a6c        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10002a6c                dcd_edpt_close_all
+                0x10002a7c        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10002a7c                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x10002a70       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10002a70                dcd_edpt_xfer
+                0x10002a80       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10002a80                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x10002a98       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10002a98                dcd_edpt_stall
+                0x10002aa8       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10002aa8                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x10002ac8       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10002ac8                dcd_edpt_clear_stall
+                0x10002ad8       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10002ad8                dcd_edpt_clear_stall
  .text.rp2040_usb_init
-                0x10002aec       0x40 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
-                0x10002aec                rp2040_usb_init
+                0x10002afc       0x40 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+                0x10002afc                rp2040_usb_init
  .text.hw_endpoint_xfer_start
-                0x10002b2c       0x40 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
-                0x10002b2c                hw_endpoint_xfer_start
+                0x10002b3c       0x40 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+                0x10002b3c                hw_endpoint_xfer_start
  .text.configuration_reset
-                0x10002b6c       0x8c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x10002b7c       0x8c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
  .text.tud_event_hook_cb
-                0x10002bf8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002bf8                tud_event_hook_cb
- .text.tud_sof_cb
-                0x10002bfc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002bfc                tud_sof_cb
- .text.tud_descriptor_device_qualifier_cb
-                0x10002c00        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002c00                tud_descriptor_device_qualifier_cb
- .text.tud_descriptor_other_speed_configuration_cb
-                0x10002c04        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002c04                tud_descriptor_other_speed_configuration_cb
- .text.tud_mount_cb
                 0x10002c08        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002c08                tud_mount_cb
- .text.tud_umount_cb
+                0x10002c08                tud_event_hook_cb
+ .text.tud_sof_cb
                 0x10002c0c        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002c0c                tud_umount_cb
- .text.tud_suspend_cb
+                0x10002c0c                tud_sof_cb
+ .text.tud_descriptor_device_qualifier_cb
                 0x10002c10        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002c10                tud_suspend_cb
- .text.tud_resume_cb
+                0x10002c10                tud_descriptor_device_qualifier_cb
+ .text.tud_descriptor_other_speed_configuration_cb
                 0x10002c14        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002c14                tud_resume_cb
+                0x10002c14                tud_descriptor_other_speed_configuration_cb
+ .text.tud_mount_cb
+                0x10002c18        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x10002c18                tud_mount_cb
+ .text.tud_umount_cb
+                0x10002c1c        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x10002c1c                tud_umount_cb
+ .text.tud_suspend_cb
+                0x10002c20        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x10002c20                tud_suspend_cb
+ .text.tud_resume_cb
+                0x10002c24        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x10002c24                tud_resume_cb
  .text.tud_mounted
-                0x10002c18       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002c18                tud_mounted
- .text.tud_suspended
                 0x10002c28       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002c28                tud_suspended
+                0x10002c28                tud_mounted
+ .text.tud_suspended
+                0x10002c38       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x10002c38                tud_suspended
  .text.tud_rhport_init
-                0x10002c38       0xf4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002c38                tud_rhport_init
+                0x10002c48       0xf4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x10002c48                tud_rhport_init
  .text.tud_task_ext
-                0x10002d2c      0x784 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10002d2c                tud_task_ext
+                0x10002d3c      0x784 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x10002d3c                tud_task_ext
  .text.usbd_open_edpt_pair
-                0x100034b0       0x9c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x100034b0                usbd_open_edpt_pair
+                0x100034c0       0x9c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x100034c0                usbd_open_edpt_pair
  .text.usbd_edpt_open
-                0x1000354c       0x44 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x1000354c                usbd_edpt_open
+                0x1000355c       0x44 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x1000355c                usbd_edpt_open
  .text.usbd_edpt_claim
-                0x10003590       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x10003590                usbd_edpt_claim
+                0x100035a0       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x100035a0                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x100035b4       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x100035b4                usbd_edpt_release
+                0x100035c4       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x100035c4                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x100035d8       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
-                0x100035d8                usbd_edpt_xfer
+                0x100035e8       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x100035e8                usbd_edpt_xfer
  .text.tud_control_status
-                0x10003648       0x34 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
-                0x10003648                tud_control_status
+                0x10003658       0x34 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+                0x10003658                tud_control_status
  .text.tud_control_xfer
-                0x1000367c       0xb0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
-                0x1000367c                tud_control_xfer
+                0x1000368c       0xb0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+                0x1000368c                tud_control_xfer
  .text.usbd_control_reset
-                0x1000372c       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
-                0x1000372c                usbd_control_reset
+                0x1000373c       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+                0x1000373c                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x10003740        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
-                0x10003740                usbd_control_set_complete_callback
+                0x10003750        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+                0x10003750                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x1000374c       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
-                0x1000374c                usbd_control_set_request
+                0x1000375c       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+                0x1000375c                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x10003768      0x100 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
-                0x10003768                usbd_control_xfer_cb
+                0x10003778      0x100 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+                0x10003778                usbd_control_xfer_cb
  .text._prep_out_transaction.isra.0
-                0x10003868       0x74 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x10003878       0x74 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
  .text.tud_cdc_n_connected
-                0x100038dc       0x2c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x100038dc                tud_cdc_n_connected
+                0x100038ec       0x2c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x100038ec                tud_cdc_n_connected
  .text.tud_cdc_n_available
-                0x10003908       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x10003908                tud_cdc_n_available
+                0x10003918       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x10003918                tud_cdc_n_available
  .text.tud_cdc_n_read
-                0x1000391c       0x90 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x1000391c                tud_cdc_n_read
+                0x1000392c       0x90 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x1000392c                tud_cdc_n_read
  .text.tud_cdc_n_write_flush
-                0x100039ac       0x8c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x100039ac                tud_cdc_n_write_flush
+                0x100039bc       0x8c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x100039bc                tud_cdc_n_write_flush
  .text.tud_cdc_n_write
-                0x10003a38       0x40 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x10003a38                tud_cdc_n_write
+                0x10003a48       0x40 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x10003a48                tud_cdc_n_write
  .text.tud_cdc_n_write_available
-                0x10003a78       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x10003a78                tud_cdc_n_write_available
+                0x10003a88       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x10003a88                tud_cdc_n_write_available
  .text.cdcd_init
-                0x10003a8c       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x10003a8c                cdcd_init
+                0x10003a9c       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x10003a9c                cdcd_init
  .text.cdcd_deinit
-                0x10003afc       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x10003afc                cdcd_deinit
+                0x10003b0c       0x30 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x10003b0c                cdcd_deinit
  .text.cdcd_reset
-                0x10003b2c       0x4c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x10003b2c                cdcd_reset
+                0x10003b3c       0x4c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x10003b3c                cdcd_reset
  .text.cdcd_open
-                0x10003b78       0xc0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x10003b78                cdcd_open
+                0x10003b88       0xc0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x10003b88                cdcd_open
  .text.cdcd_control_xfer_cb
-                0x10003c38       0xc0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x10003c38                cdcd_control_xfer_cb
+                0x10003c48       0xc0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x10003c48                cdcd_control_xfer_cb
  .text.cdcd_xfer_cb
-                0x10003cf8       0xf8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
-                0x10003cf8                cdcd_xfer_cb
+                0x10003d08       0xf8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x10003d08                cdcd_xfer_cb
  .text.vendord_init
-                0x10003df0       0x5c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
-                0x10003df0                vendord_init
+                0x10003e00       0x5c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
+                0x10003e00                vendord_init
  .text.vendord_deinit
-                0x10003e4c       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
-                0x10003e4c                vendord_deinit
+                0x10003e5c       0x1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
+                0x10003e5c                vendord_deinit
  .text.vendord_reset
-                0x10003e68       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
-                0x10003e68                vendord_reset
+                0x10003e78       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
+                0x10003e78                vendord_reset
  .text.vendord_open
-                0x10003e8c       0xf4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
-                0x10003e8c                vendord_open
+                0x10003e9c       0xf4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
+                0x10003e9c                vendord_open
  .text.vendord_xfer_cb
-                0x10003f80       0x88 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
-                0x10003f80                vendord_xfer_cb
+                0x10003f90       0x88 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
+                0x10003f90                vendord_xfer_cb
  .text.tusb_rhport_init
-                0x10004008       0x64 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
-                0x10004008                tusb_rhport_init
+                0x10004018       0x64 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x10004018                tusb_rhport_init
  .text.tu_edpt_claim
-                0x1000406c       0x54 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
-                0x1000406c                tu_edpt_claim
+                0x1000407c       0x54 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x1000407c                tu_edpt_claim
  .text.tu_edpt_release
-                0x100040c0       0x38 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
-                0x100040c0                tu_edpt_release
+                0x100040d0       0x38 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x100040d0                tu_edpt_release
  .text.tu_edpt_validate
-                0x100040f8       0x60 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
-                0x100040f8                tu_edpt_validate
+                0x10004108       0x60 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x10004108                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x10004158       0x58 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
-                0x10004158                tu_edpt_bind_driver
+                0x10004168       0x58 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x10004168                tu_edpt_bind_driver
  .text.tu_edpt_stream_init
-                0x100041b0       0x58 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
-                0x100041b0                tu_edpt_stream_init
+                0x100041c0       0x58 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x100041c0                tu_edpt_stream_init
  .text.tu_edpt_stream_deinit
-                0x10004208        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
-                0x10004208                tu_edpt_stream_deinit
+                0x10004218        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x10004218                tu_edpt_stream_deinit
  .text.tu_edpt_stream_write_zlp_if_needed
-                0x1000420c       0x68 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
-                0x1000420c                tu_edpt_stream_write_zlp_if_needed
+                0x1000421c       0x68 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x1000421c                tu_edpt_stream_write_zlp_if_needed
  .text.tu_edpt_stream_write_xfer
-                0x10004274       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
-                0x10004274                tu_edpt_stream_write_xfer
+                0x10004284       0x70 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x10004284                tu_edpt_stream_write_xfer
  .text.tu_edpt_stream_read_xfer
-                0x100042e4       0xc8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
-                0x100042e4                tu_edpt_stream_read_xfer
+                0x100042f4       0xc8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x100042f4                tu_edpt_stream_read_xfer
  .text.tu_fifo_config
-                0x100043ac       0x60 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x100043ac                tu_fifo_config
+                0x100043bc       0x60 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x100043bc                tu_fifo_config
  .text.tu_fifo_count
-                0x1000440c       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x1000440c                tu_fifo_count
+                0x1000441c       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x1000441c                tu_fifo_count
  .text.tu_fifo_empty
-                0x1000442c       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x1000442c                tu_fifo_empty
+                0x1000443c       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x1000443c                tu_fifo_empty
  .text.tu_fifo_remaining
-                0x10004440       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x10004440                tu_fifo_remaining
+                0x10004450       0x24 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x10004450                tu_fifo_remaining
  .text.tu_fifo_read
-                0x10004464       0x94 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x10004464                tu_fifo_read
+                0x10004474       0x94 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x10004474                tu_fifo_read
  .text.tu_fifo_read_n
-                0x100044f8       0xd8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x100044f8                tu_fifo_read_n
+                0x10004508       0xd8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x10004508                tu_fifo_read_n
  .text.tu_fifo_write
-                0x100045d0       0xa4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x100045d0                tu_fifo_write
+                0x100045e0       0xa4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x100045e0                tu_fifo_write
  .text.tu_fifo_write_n
-                0x10004674      0x15c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x10004674                tu_fifo_write_n
+                0x10004684      0x15c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x10004684                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x100047d0       0x38 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x100047d0                tu_fifo_clear
+                0x100047e0       0x38 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x100047e0                tu_fifo_clear
  .text.tu_fifo_set_overwritable
-                0x10004808       0x3c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x10004808                tu_fifo_set_overwritable
+                0x10004818       0x3c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x10004818                tu_fifo_set_overwritable
  .text.i2c_write_blocking_internal.constprop.0
-                0x10004844       0x9c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
+                0x10004854       0x9c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
  .text.i2c_set_baudrate
-                0x100048e0       0xa4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
-                0x100048e0                i2c_set_baudrate
+                0x100048f0       0xa4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
+                0x100048f0                i2c_set_baudrate
  .text.i2c_init
-                0x10004984       0x4c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
-                0x10004984                i2c_init
+                0x10004994       0x4c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
+                0x10004994                i2c_init
  .text.i2c_write_blocking
-                0x100049d0       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
-                0x100049d0                i2c_write_blocking
- .text.malloc   0x100049e0       0x10 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-malloc.o)
-                0x100049e0                malloc
- .text.free     0x100049f0       0x10 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-malloc.o)
-                0x100049f0                free
+                0x100049e0       0x10 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
+                0x100049e0                i2c_write_blocking
+ .text.malloc   0x100049f0       0x10 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-malloc.o)
+                0x100049f0                malloc
+ .text.free     0x10004a00       0x10 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-malloc.o)
+                0x10004a00                free
  .text._malloc_r
-                0x10004a00      0x578 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-mallocr.o)
-                0x10004a00                _malloc_r
+                0x10004a10      0x578 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-mallocr.o)
+                0x10004a10                _malloc_r
  .text.__malloc_lock
-                0x10004f78        0xc /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-mlock.o)
-                0x10004f78                __malloc_lock
+                0x10004f88        0xc /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-mlock.o)
+                0x10004f88                __malloc_lock
  .text.__malloc_unlock
-                0x10004f84        0xc /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-mlock.o)
-                0x10004f84                __malloc_unlock
- .text.memset   0x10004f90       0x9c /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-memset.o)
-                0x10004f90                memset
- .text._sbrk_r  0x1000502c       0x24 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-sbrkr.o)
-                0x1000502c                _sbrk_r
- .text.__errno  0x10005050        0xc /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-errno.o)
-                0x10005050                __errno
+                0x10004f94        0xc /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-mlock.o)
+                0x10004f94                __malloc_unlock
+ .text.memset   0x10004fa0       0x9c /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-memset.o)
+                0x10004fa0                memset
+ .text._sbrk_r  0x1000503c       0x24 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-sbrkr.o)
+                0x1000503c                _sbrk_r
+ .text.__errno  0x10005060        0xc /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-errno.o)
+                0x10005060                __errno
  .text.__retarget_lock_acquire_recursive
-                0x1000505c        0x4 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-lock.o)
-                0x1000505c                __retarget_lock_acquire_recursive
+                0x1000506c        0x4 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-lock.o)
+                0x1000506c                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x10005060        0x4 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-lock.o)
-                0x10005060                __retarget_lock_release_recursive
- .text.sysconf  0x10005064       0x1c /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-sysconf.o)
-                0x10005064                sysconf
- .text          0x10005080       0xec /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-memcpy.o)
-                0x10005080                memcpy
- .text.strlen   0x1000516c       0x5c /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-strlen-stub.o)
-                0x1000516c                strlen
+                0x10005070        0x4 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-lock.o)
+                0x10005070                __retarget_lock_release_recursive
+ .text.sysconf  0x10005074       0x1c /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-sysconf.o)
+                0x10005074                sysconf
+ .text          0x10005090       0xec /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-memcpy.o)
+                0x10005090                memcpy
+ .text.strlen   0x1000517c       0x5c /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-strlen-stub.o)
+                0x1000517c                strlen
  .text._malloc_trim_r
-                0x100051c8       0xb8 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-freer.o)
-                0x100051c8                _malloc_trim_r
- .text._free_r  0x10005280      0x1e8 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-freer.o)
-                0x10005280                _free_r
+                0x100051d8       0xb8 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-freer.o)
+                0x100051d8                _malloc_trim_r
+ .text._free_r  0x10005290      0x1e8 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-freer.o)
+                0x10005290                _free_r
  *(.fini)
- .fini          0x10005468        0x4 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crti.o
-                0x10005468                _fini
- *fill*         0x1000546c        0x4 
- .fini.__stub   0x10005470       0x48 linker stubs
+ .fini          0x10005478        0x4 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crti.o
+                0x10005478                _fini
+ *fill*         0x1000547c        0x4 
+ .fini.__stub   0x10005480       0x48 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -3435,207 +3434,207 @@ LOAD /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x100054b8                        . = ALIGN (0x4)
-                0x100054b8                        PROVIDE (__preinit_array_start = .)
+                0x100054c8                        . = ALIGN (0x4)
+                0x100054c8                        PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00050
-                0x100054b8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100054b8                __pre_init_runtime_init_bootrom_reset
- .preinit_array.00100
-                0x100054bc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100054bc                __pre_init_runtime_init_early_resets
- .preinit_array.00101
-                0x100054c0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100054c0                __pre_init_runtime_init_usb_power_down
- .preinit_array.00500
-                0x100054c4        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100054c4                __pre_init_runtime_init_clocks
- .preinit_array.00600
                 0x100054c8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100054c8                __pre_init_runtime_init_post_clock_resets
- .preinit_array.01000
-                0x100054cc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
-                0x100054cc                __pre_init_runtime_init_boot_locks_reset
- .preinit_array.01000
+                0x100054c8                __pre_init_runtime_init_bootrom_reset
+ .preinit_array.00100
+                0x100054cc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100054cc                __pre_init_runtime_init_early_resets
+ .preinit_array.00101
                 0x100054d0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100054d0                __pre_init_runtime_init_spin_locks_reset
+                0x100054d0                __pre_init_runtime_init_usb_power_down
+ .preinit_array.00500
+                0x100054d4        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100054d4                __pre_init_runtime_init_clocks
+ .preinit_array.00600
+                0x100054d8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100054d8                __pre_init_runtime_init_post_clock_resets
+ .preinit_array.01000
+                0x100054dc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+                0x100054dc                __pre_init_runtime_init_boot_locks_reset
+ .preinit_array.01000
+                0x100054e0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100054e0                __pre_init_runtime_init_spin_locks_reset
  .preinit_array.01010
-                0x100054d4        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
-                0x100054d4                __pre_init_runtime_init_bootrom_locking_enable
+                0x100054e4        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+                0x100054e4                __pre_init_runtime_init_bootrom_locking_enable
  .preinit_array.01100
-                0x100054d8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
-                0x100054d8                __pre_init_runtime_init_mutex
+                0x100054e8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x100054e8                __pre_init_runtime_init_mutex
  .preinit_array.10080
-                0x100054dc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100054dc                __pre_init_runtime_init_install_ram_vector_table
- .preinit_array.11000
-                0x100054e0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x100054e0                __pre_init_runtime_init_default_alarm_pool
- .preinit_array.YYYYY
-                0x100054e4        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
-                0x100054e4                __pre_init_first_per_core_initializer
- .preinit_array.ZZZZZ.00051
-                0x100054e8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100054e8                __pre_init_runtime_init_per_core_bootrom_reset
- .preinit_array.ZZZZZ.00200
                 0x100054ec        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100054ec                __pre_init_runtime_init_per_core_enable_coprocessors
+                0x100054ec                __pre_init_runtime_init_install_ram_vector_table
+ .preinit_array.11000
+                0x100054f0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x100054f0                __pre_init_runtime_init_default_alarm_pool
+ .preinit_array.YYYYY
+                0x100054f4        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x100054f4                __pre_init_first_per_core_initializer
+ .preinit_array.ZZZZZ.00051
+                0x100054f8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100054f8                __pre_init_runtime_init_per_core_bootrom_reset
+ .preinit_array.ZZZZZ.00200
+                0x100054fc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100054fc                __pre_init_runtime_init_per_core_enable_coprocessors
  .preinit_array.ZZZZZ.01000
-                0x100054f0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
-                0x100054f0                __pre_init_spinlock_set_extexclall
+                0x10005500        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x10005500                __pre_init_spinlock_set_extexclall
  .preinit_array.ZZZZZ.01200
-                0x100054f4        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x100054f4                __pre_init_runtime_init_per_core_irq_priorities
+                0x10005504        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10005504                __pre_init_runtime_init_per_core_irq_priorities
  *(.preinit_array)
-                0x100054f8                        PROVIDE (__preinit_array_end = .)
-                0x100054f8                        . = ALIGN (0x4)
-                0x100054f8                        PROVIDE (__init_array_start = .)
+                0x10005508                        PROVIDE (__preinit_array_end = .)
+                0x10005508                        . = ALIGN (0x4)
+                0x10005508                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.01000
-                0x100054f8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
+                0x10005508        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
  *(.init_array)
- .init_array    0x100054fc        0x4 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
-                0x10005500                        PROVIDE (__init_array_end = .)
-                0x10005500                        . = ALIGN (0x4)
+ .init_array    0x1000550c        0x4 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
+                0x10005510                        PROVIDE (__init_array_end = .)
+                0x10005510                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
                 [!provide]                        PROVIDE (__fini_array_end = .)
  *(.eh_frame*)
- .eh_frame      0x10005500        0x0 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
-                0x10005500                        . = ALIGN (0x4)
+ .eh_frame      0x10005510        0x0 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
+                0x10005510                        . = ALIGN (0x4)
 
-.glue_7         0x10005500        0x0
- .glue_7        0x10005500        0x0 linker stubs
+.glue_7         0x10005510        0x0
+ .glue_7        0x10005510        0x0 linker stubs
 
-.glue_7t        0x10005500        0x0
- .glue_7t       0x10005500        0x0 linker stubs
+.glue_7t        0x10005510        0x0
+ .glue_7t       0x10005510        0x0 linker stubs
 
-.vfp11_veneer   0x10005500        0x0
- .vfp11_veneer  0x10005500        0x0 linker stubs
+.vfp11_veneer   0x10005510        0x0
+ .vfp11_veneer  0x10005510        0x0 linker stubs
 
-.v4_bx          0x10005500        0x0
- .v4_bx         0x10005500        0x0 linker stubs
+.v4_bx          0x10005510        0x0
+ .v4_bx         0x10005510        0x0 linker stubs
 
-.iplt           0x10005500        0x0
- .iplt          0x10005500        0x0 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
+.iplt           0x10005510        0x0
+ .iplt          0x10005510        0x0 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
 
-.boot2          0x10005500        0x0
-                0x10005500                        __boot2_start__ = .
+.boot2          0x10005510        0x0
+                0x10005510                        __boot2_start__ = .
  *(.boot2)
-                0x10005500                        __boot2_end__ = .
+                0x10005510                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) <= 0x100), ERROR: Pico second stage bootloader must be no more than 256 bytes in size)
 
-.rodata         0x10005500      0x3c4
+.rodata         0x10005510      0x3c4
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.main.str1.4
-                0x10005500      0x17c CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
+                0x10005510      0x17c CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
                                   0xc (size before relaxing)
- .rodata        0x1000567c       0x22 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+ .rodata        0x1000568c       0x22 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
  .rodata.panic.str1.4
-                0x1000569e       0x12 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+                0x100056ae       0x12 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
  .rodata.spin_lock_claim_unused.str1.4
-                0x1000569e       0x1b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+                0x100056ae       0x1b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
  .rodata.user_irq_claim_unused.str1.4
-                0x1000569e       0x1b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- *fill*         0x1000569e        0x2 
+                0x100056ae       0x1b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ *fill*         0x100056ae        0x2 
  .rodata.nil_time
-                0x100056a0        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x100056a0                nil_time
+                0x100056b0        0x8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x100056b0                nil_time
  .rodata.timer_hardware_alarm_claim.str1.4
-                0x100056a8       0x22 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x100056b8       0x22 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
  .rodata.hard_assertion_failure.str1.4
-                0x100056a8        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x100056b8        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
  .rodata.__wrap_malloc.str1.4
-                0x100056a8        0xe CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+                0x100056b8        0xe CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
  .rodata.str1.4
-                0x100056a8       0x48 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100056b8       0x48 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_84
-                0x100056a8        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100056b8        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_78
-                0x100056b4        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100056c4        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_60
-                0x100056c0        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100056d0        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_54
-                0x100056cc        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100056dc        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_48
-                0x100056d8        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100056e8        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_42
-                0x100056e4        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100056f4        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_34
-                0x100056f0        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10005700        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_26
-                0x100056fc        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x1000570c        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.crlf_str.0
-                0x10005708        0x2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
- *fill*         0x1000570a        0x2 
+                0x10005718        0x2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ *fill*         0x1000571a        0x2 
  .rodata._resetd_driver
-                0x1000570c       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x1000571c       0x20 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
  .rodata.desc_ms_os_20
-                0x1000572c       0xa6 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
- *fill*         0x100057d2        0x2 
+                0x1000573c       0xa6 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+ *fill*         0x100057e2        0x2 
  .rodata.desc_bos
-                0x100057d4       0x21 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
-                0x100057d4                desc_bos
+                0x100057e4       0x21 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x100057e4                desc_bos
  .rodata.str1.4
-                0x100057f5       0x13 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- *fill*         0x100057f5        0x3 
+                0x10005805       0x13 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ *fill*         0x10005805        0x3 
  .rodata.__bi_202.0
-                0x100057f8        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x10005808        0xc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
  .rodata.str1.4
-                0x10005804       0x2a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+                0x10005814       0x2a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
  .rodata.usbd_desc_str
-                0x10005804       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+                0x10005814       0x18 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
  .rodata.usbd_desc_cfg
-                0x1000581c       0x54 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+                0x1000582c       0x54 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
  .rodata.usbd_desc_device
-                0x10005870       0x12 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+                0x10005880       0x12 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
  .rodata.str1.4
-                0x10005882       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10005892       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
  .rodata.str1.4
-                0x10005882       0x48 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- *fill*         0x10005882        0x2 
+                0x10005892       0x48 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ *fill*         0x10005892        0x2 
  .rodata._usbd_driver
-                0x10005884       0x40 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x10005894       0x40 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
  *(.srodata*)
-                0x100058c4                        . = ALIGN (0x4)
+                0x100058d4                        . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x100058c4                        . = ALIGN (0x4)
+                0x100058d4                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x100058c4                        __exidx_start = .
+                0x100058d4                        __exidx_start = .
 
-.ARM.exidx      0x100058c4        0x8
+.ARM.exidx      0x100058d4        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x100058c4        0x8 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-memcpy.o)
-                0x100058cc                        __exidx_end = .
-                0x100058cc                        . = ALIGN (0x4)
-                0x100058cc                        __binary_info_start = .
+ .ARM.exidx     0x100058d4        0x8 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/libg.a(libc_a-memcpy.o)
+                0x100058dc                        __exidx_end = .
+                0x100058dc                        . = ALIGN (0x4)
+                0x100058dc                        __binary_info_start = .
 
-.binary_info    0x100058cc       0x24
+.binary_info    0x100058dc       0x24
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr84
-                0x100058cc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .binary_info.keep.__bi_ptr78
-                0x100058d0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .binary_info.keep.__bi_ptr60
-                0x100058d4        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .binary_info.keep.__bi_ptr54
-                0x100058d8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .binary_info.keep.__bi_ptr48
                 0x100058dc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .binary_info.keep.__bi_ptr42
+ .binary_info.keep.__bi_ptr78
                 0x100058e0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .binary_info.keep.__bi_ptr34
+ .binary_info.keep.__bi_ptr60
                 0x100058e4        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .binary_info.keep.__bi_ptr26
+ .binary_info.keep.__bi_ptr54
                 0x100058e8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .binary_info.keep.__bi_ptr48
+                0x100058ec        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .binary_info.keep.__bi_ptr42
+                0x100058f0        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .binary_info.keep.__bi_ptr34
+                0x100058f4        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .binary_info.keep.__bi_ptr26
+                0x100058f8        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  *(.binary_info.*)
  .binary_info.__bi_ptr202
-                0x100058ec        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
-                0x100058f0                        __binary_info_end = .
-                0x100058f0                        . = ALIGN (0x4)
+                0x100058fc        0x4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x10005900                        __binary_info_end = .
+                0x10005900                        . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000      0x110
@@ -3649,7 +3648,7 @@ LOAD /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.
                 0x20000110                        . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.data           0x20000110     0x1420 load address 0x100058f0
+.data           0x20000110     0x1420 load address 0x10005900
                 0x20000110                        __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -3758,23 +3757,23 @@ LOAD /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.
                 0x20001530                        . = ALIGN (0x4)
 
 .tm_clone_table
-                0x20001530        0x0 load address 0x10006d10
+                0x20001530        0x0 load address 0x10006d20
  .tm_clone_table
                 0x20001530        0x0 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
  .tm_clone_table
                 0x20001530        0x0 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtend.o
 
-.igot.plt       0x20001530        0x0 load address 0x10006d10
+.igot.plt       0x20001530        0x0 load address 0x10006d20
  .igot.plt      0x20001530        0x0 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
 
-.tdata          0x20001530        0x0 load address 0x10006d10
+.tdata          0x20001530        0x0 load address 0x10006d20
                 0x20001530                        . = ALIGN (0x4)
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x20001530                        __tdata_end = .
                 0x20001530                        PROVIDE (__data_end__ = .)
-                0x100058f0                        __etext = LOADADDR (.data)
+                0x10005900                        __etext = LOADADDR (.data)
 
-.tbss           0x20001530        0x0 load address 0x10006d10
+.tbss           0x20001530        0x0 load address 0x10006d20
                 0x20001530                        . = ALIGN (0x4)
                 0x20001530                        __bss_start__ = .
                 0x20001530                        __tls_base = .
@@ -3782,7 +3781,7 @@ LOAD /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.
  *(.tcommon)
                 0x20001530                        __tls_end = .
 
-.bss            0x20001530      0xff0 load address 0x10006d10
+.bss            0x20001530      0xff0 load address 0x10006d20
                 0x20001530                        . = ALIGN (0x4)
                 0x20001530                        __tbss_end = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
@@ -3911,26 +3910,26 @@ LOAD /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.
  *fill*         0x2000251d        0x3 
                 0x20002520                        __bss_end__ = .
 
-.heap           0x20002520      0x800 load address 0x10006d10
+.heap           0x20002520      0x800 load address 0x10006d20
                 0x20002520                        __end__ = .
                 0x20002520                        end = __end__
  *(.heap*)
  .heap          0x20002520      0x800 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
                 0x20080000                        __HeapLimit = (ORIGIN (RAM) + LENGTH (RAM))
 
-.scratch_x      0x20080000        0x0 load address 0x10006d10
+.scratch_x      0x20080000        0x0 load address 0x10006d20
                 0x20080000                        __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20080000                        . = ALIGN (0x4)
                 0x20080000                        __scratch_x_end__ = .
-                0x10006d10                        __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10006d20                        __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20081000        0x0 load address 0x10006d10
+.scratch_y      0x20081000        0x0 load address 0x10006d20
                 0x20081000                        __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20081000                        . = ALIGN (0x4)
                 0x20081000                        __scratch_y_end__ = .
-                0x10006d10                        __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10006d20                        __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .stack1_dummy
  *(.stack1*)
@@ -3939,11 +3938,11 @@ LOAD /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.
  *(.stack*)
  .stack         0x20081000      0x800 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
 
-.flash_end      0x10006d10       0x14
+.flash_end      0x10006d20       0x14
  *(.embedded_end_block*)
  .embedded_end_block
-                0x10006d10       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
-                0x10006d24                        PROVIDE (__flash_binary_end = .)
+                0x10006d20       0x14 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+                0x10006d34                        PROVIDE (__flash_binary_end = .)
                 0x20080000                        __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20081000                        __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20082000                        __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -4063,8 +4062,8 @@ LOAD /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.
 OUTPUT(pico_uart_oled.elf elf32-littlearm)
 LOAD linker stubs
 
-.rel.dyn        0x10006d24        0x0
- .rel.iplt      0x10006d24        0x0 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
+.rel.dyn        0x10006d34        0x0
+ .rel.iplt      0x10006d34        0x0 /home/mech/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp/crtbegin.o
 
 .ARM.attributes
                 0x00000000       0x34
@@ -4242,52 +4241,52 @@ LOAD linker stubs
  .comment       0x00000045       0x46 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
  .comment       0x00000045       0x46 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
 
-.debug_info     0x00000000    0x39452
- .debug_info    0x00000000     0x1c03 CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
- .debug_info    0x00001c03      0xa69 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
- .debug_info    0x0000266c      0x4d0 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
- .debug_info    0x00002b3c     0x2416 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_info    0x00004f52      0x1be CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_info    0x00005110      0xb78 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
- .debug_info    0x00005c88      0x46f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
- .debug_info    0x000060f7     0x145e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_info    0x00007555     0x262d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- .debug_info    0x00009b82      0x187 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
- .debug_info    0x00009d09     0x1e7c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
- .debug_info    0x0000bb85      0x389 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
- .debug_info    0x0000bf0e     0x5492 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- .debug_info    0x000113a0     0x30c6 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
- .debug_info    0x00014466     0x19a6 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
- .debug_info    0x00015e0c     0x28c2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_info    0x000186ce      0x507 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
- .debug_info    0x00018bd5      0xbb9 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
- .debug_info    0x0001978e      0x26c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_info    0x000199fa     0x10ab CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_info    0x0001aaa5      0x1c4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
- .debug_info    0x0001ac69      0x316 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
- .debug_info    0x0001af7f      0x1b1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_info    0x0001b130      0x21a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
- .debug_info    0x0001b34a     0x1c34 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_info    0x0001cf7e      0x7c9 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_info    0x0001d747      0x3e4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
- .debug_info    0x0001db2b      0x2e2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_info    0x0001de0d     0x22ff CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
- .debug_info    0x0002010c       0x23 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
- .debug_info    0x0002012f      0xc25 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_info    0x00020d54     0x1c5b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
- .debug_info    0x000229af      0xb12 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
- .debug_info    0x000234c1     0x1faa CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_info    0x0002546b      0x72b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- .debug_info    0x00025b96      0x2b7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_info    0x00025e4d     0x2d28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_info    0x00028b75     0x126b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_info    0x00029de0     0x4b88 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
- .debug_info    0x0002e968      0xc13 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
- .debug_info    0x0002f57b     0x210b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_info    0x00031686     0x178d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
- .debug_info    0x00032e13     0x2081 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
- .debug_info    0x00034e94     0x28a2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_info    0x00037736     0x1d1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
+.debug_info     0x00000000    0x39499
+ .debug_info    0x00000000     0x1c4a CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
+ .debug_info    0x00001c4a      0xa69 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+ .debug_info    0x000026b3      0x4d0 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
+ .debug_info    0x00002b83     0x2416 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_info    0x00004f99      0x1be CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_info    0x00005157      0xb78 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+ .debug_info    0x00005ccf      0x46f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+ .debug_info    0x0000613e     0x145e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_info    0x0000759c     0x262d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ .debug_info    0x00009bc9      0x187 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+ .debug_info    0x00009d50     0x1e7c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+ .debug_info    0x0000bbcc      0x389 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
+ .debug_info    0x0000bf55     0x5492 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ .debug_info    0x000113e7     0x30c6 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+ .debug_info    0x000144ad     0x19a6 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
+ .debug_info    0x00015e53     0x28c2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_info    0x00018715      0x507 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+ .debug_info    0x00018c1c      0xbb9 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_info    0x000197d5      0x26c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_info    0x00019a41     0x10ab CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_info    0x0001aaec      0x1c4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+ .debug_info    0x0001acb0      0x316 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+ .debug_info    0x0001afc6      0x1b1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_info    0x0001b177      0x21a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_info    0x0001b391     0x1c34 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_info    0x0001cfc5      0x7c9 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_info    0x0001d78e      0x3e4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_info    0x0001db72      0x2e2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_info    0x0001de54     0x22ff CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+ .debug_info    0x00020153       0x23 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_info    0x00020176      0xc25 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_info    0x00020d9b     0x1c5b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_info    0x000229f6      0xb12 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+ .debug_info    0x00023508     0x1faa CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_info    0x000254b2      0x72b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .debug_info    0x00025bdd      0x2b7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_info    0x00025e94     0x2d28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_info    0x00028bbc     0x126b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_info    0x00029e27     0x4b88 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+ .debug_info    0x0002e9af      0xc13 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_info    0x0002f5c2     0x210b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_info    0x000316cd     0x178d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
+ .debug_info    0x00032e5a     0x2081 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+ .debug_info    0x00034edb     0x28a2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_info    0x0003777d     0x1d1c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
 
 .debug_abbrev   0x00000000     0x9d96
  .debug_abbrev  0x00000000      0x48b CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
@@ -4337,91 +4336,91 @@ LOAD linker stubs
  .debug_abbrev  0x000098f1      0x4a5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
 
 .debug_loclists
-                0x00000000    0x1b37f
+                0x00000000    0x1b380
  .debug_loclists
-                0x00000000      0x508 CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
+                0x00000000      0x509 CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
  .debug_loclists
-                0x00000508       0xf7 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+                0x00000509       0xf7 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
  .debug_loclists
-                0x000005ff      0x6ba CMakeFiles/pico_uart_oled.dir/text_ui.c.o
+                0x00000600      0x6ba CMakeFiles/pico_uart_oled.dir/text_ui.c.o
  .debug_loclists
-                0x00000cb9     0x17d5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x00000cba     0x17d5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
  .debug_loclists
-                0x0000248e      0x42d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x0000248f      0x42d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
  .debug_loclists
-                0x000028bb      0x132 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+                0x000028bc      0x132 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
  .debug_loclists
-                0x000029ed       0xa2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x000029ee       0xa2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
  .debug_loclists
-                0x00002a8f     0x1034 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x00002a90     0x1034 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
  .debug_loclists
-                0x00003ac3       0x17 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+                0x00003ac4       0x17 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
  .debug_loclists
-                0x00003ada      0xae7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x00003adb      0xae7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
  .debug_loclists
-                0x000045c1       0x8c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
+                0x000045c2       0x8c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
  .debug_loclists
-                0x0000464d     0x2c58 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x0000464e     0x2c58 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
  .debug_loclists
-                0x000072a5     0x1a3f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x000072a6     0x1a3f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
  .debug_loclists
-                0x00008ce4      0xc8f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
+                0x00008ce5      0xc8f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
  .debug_loclists
-                0x00009973     0x2038 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+                0x00009974     0x2038 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
  .debug_loclists
-                0x0000b9ab      0x1b7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+                0x0000b9ac      0x1b7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
  .debug_loclists
-                0x0000bb62      0x533 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
+                0x0000bb63      0x533 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
  .debug_loclists
-                0x0000c095       0x8b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+                0x0000c096       0x8b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
  .debug_loclists
-                0x0000c120      0x812 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x0000c121      0x812 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
  .debug_loclists
-                0x0000c932       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+                0x0000c933       0x28 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
  .debug_loclists
-                0x0000c95a       0x78 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+                0x0000c95b       0x78 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
  .debug_loclists
-                0x0000c9d2       0x48 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+                0x0000c9d3       0x48 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
  .debug_loclists
-                0x0000ca1a       0x7e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x0000ca1b       0x7e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
  .debug_loclists
-                0x0000ca98      0x129 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x0000ca99      0x129 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
  .debug_loclists
-                0x0000cbc1       0x74 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+                0x0000cbc2       0x74 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
  .debug_loclists
-                0x0000cc35      0x14b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+                0x0000cc36      0x14b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
  .debug_loclists
-                0x0000cd80     0x2e21 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+                0x0000cd81     0x2e21 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
  .debug_loclists
-                0x0000fba1      0x425 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x0000fba2      0x425 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
  .debug_loclists
-                0x0000ffc6      0xb26 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x0000ffc7      0xb26 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
  .debug_loclists
-                0x00010aec      0x256 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x00010aed      0x256 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
  .debug_loclists
-                0x00010d42      0x6ae CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x00010d43      0x6ae CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
  .debug_loclists
-                0x000113f0       0xfb CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+                0x000113f1       0xfb CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
  .debug_loclists
-                0x000114eb      0x38d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
+                0x000114ec      0x38d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
  .debug_loclists
-                0x00011878     0x1eef CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x00011879     0x1eef CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
  .debug_loclists
-                0x00013767      0x632 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+                0x00013768      0x632 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
  .debug_loclists
-                0x00013d99     0x21e7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x00013d9a     0x21e7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
  .debug_loclists
-                0x00015f80      0x499 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+                0x00015f81      0x499 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
  .debug_loclists
-                0x00016419      0xef5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x0001641a      0xef5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
  .debug_loclists
-                0x0001730e      0x756 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
+                0x0001730f      0x756 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
  .debug_loclists
-                0x00017a64      0xed1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x00017a65      0xed1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
  .debug_loclists
-                0x00018935     0x1bd4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x00018936     0x1bd4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
  .debug_loclists
-                0x0001a509      0xe76 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
+                0x0001a50a      0xe76 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
 
 .debug_aranges  0x00000000     0x1340
  .debug_aranges
@@ -4516,190 +4515,190 @@ LOAD linker stubs
                 0x000012a8       0x98 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
 
 .debug_rnglists
-                0x00000000     0x4bcc
+                0x00000000     0x4bd3
  .debug_rnglists
-                0x00000000      0x103 CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
+                0x00000000      0x10a CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
  .debug_rnglists
-                0x00000103       0x68 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+                0x0000010a       0x68 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
  .debug_rnglists
-                0x0000016b      0x119 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
+                0x00000172      0x119 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
  .debug_rnglists
-                0x00000284      0x626 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x0000028b      0x626 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
  .debug_rnglists
-                0x000008aa       0x19 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+                0x000008b1       0x19 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
  .debug_rnglists
-                0x000008c3       0xf2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x000008ca       0xf2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
  .debug_rnglists
-                0x000009b5       0x5b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+                0x000009bc       0x5b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
  .debug_rnglists
-                0x00000a10       0x43 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x00000a17       0x43 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
  .debug_rnglists
-                0x00000a53      0x3e4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x00000a5a      0x3e4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
  .debug_rnglists
-                0x00000e37       0x13 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+                0x00000e3e       0x13 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
  .debug_rnglists
-                0x00000e4a      0x2ac CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x00000e51      0x2ac CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
  .debug_rnglists
-                0x000010f6       0x3a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
+                0x000010fd       0x3a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
  .debug_rnglists
-                0x00001130      0x847 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x00001137      0x847 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
  .debug_rnglists
-                0x00001977      0x481 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x0000197e      0x481 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
  .debug_rnglists
-                0x00001df8      0x241 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
+                0x00001dff      0x241 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
  .debug_rnglists
-                0x00002039      0x610 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+                0x00002040      0x610 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
  .debug_rnglists
-                0x00002649       0x59 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+                0x00002650       0x59 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
  .debug_rnglists
-                0x000026a2      0x1d2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
+                0x000026a9      0x1d2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
  .debug_rnglists
-                0x00002874       0x2b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+                0x0000287b       0x2b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
  .debug_rnglists
-                0x0000289f      0x131 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x000028a6      0x131 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
  .debug_rnglists
-                0x000029d0       0x13 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+                0x000029d7       0x13 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
  .debug_rnglists
-                0x000029e3       0x4f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+                0x000029ea       0x4f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
  .debug_rnglists
-                0x00002a32       0x2b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+                0x00002a39       0x2b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
  .debug_rnglists
-                0x00002a5d       0x3d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x00002a64       0x3d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
  .debug_rnglists
-                0x00002a9a       0x7c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x00002aa1       0x7c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
  .debug_rnglists
-                0x00002b16       0x2c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+                0x00002b1d       0x2c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
  .debug_rnglists
-                0x00002b42       0x49 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+                0x00002b49       0x49 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
  .debug_rnglists
-                0x00002b8b      0x2fd CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+                0x00002b92      0x2fd CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
  .debug_rnglists
-                0x00002e88       0x1b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+                0x00002e8f       0x1b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
  .debug_rnglists
-                0x00002ea3       0xb5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x00002eaa       0xb5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
  .debug_rnglists
-                0x00002f58      0x302 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x00002f5f      0x302 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
  .debug_rnglists
-                0x0000325a       0x43 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x00003261       0x43 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
  .debug_rnglists
-                0x0000329d      0x247 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x000032a4      0x247 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
  .debug_rnglists
-                0x000034e4       0x2b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+                0x000034eb       0x2b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
  .debug_rnglists
-                0x0000350f       0xb1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
+                0x00003516       0xb1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
  .debug_rnglists
-                0x000035c0      0x4a1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x000035c7      0x4a1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
  .debug_rnglists
-                0x00003a61       0xf0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+                0x00003a68       0xf0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
  .debug_rnglists
-                0x00003b51      0x5f9 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+                0x00003b58      0x5f9 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
  .debug_rnglists
-                0x0000414a       0x8b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+                0x00004151       0x8b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
  .debug_rnglists
-                0x000041d5      0x1da CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+                0x000041dc      0x1da CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
  .debug_rnglists
-                0x000043af      0x10d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
+                0x000043b6      0x10d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
  .debug_rnglists
-                0x000044bc      0x25b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+                0x000044c3      0x25b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
  .debug_rnglists
-                0x00004717      0x30f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x0000471e      0x30f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
  .debug_rnglists
-                0x00004a26      0x1a6 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
+                0x00004a2d      0x1a6 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
 
-.debug_line     0x00000000    0x2402c
- .debug_line    0x00000000      0xb59 CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
- .debug_line    0x00000b59      0x4b3 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
- .debug_line    0x0000100c      0xfdc CMakeFiles/pico_uart_oled.dir/text_ui.c.o
- .debug_line    0x00001fe8     0x1b91 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_line    0x00003b79      0x26d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_line    0x00003de6      0x7f0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
- .debug_line    0x000045d6      0x408 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
- .debug_line    0x000049de      0x388 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_line    0x00004d66     0x16e9 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- .debug_line    0x0000644f      0x258 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
- .debug_line    0x000066a7     0x124e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
- .debug_line    0x000078f5      0x3a4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
- .debug_line    0x00007c99     0x318c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- .debug_line    0x0000ae25     0x1d99 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
- .debug_line    0x0000cbbe      0xe81 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
- .debug_line    0x0000da3f     0x1e9b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_line    0x0000f8da      0x4c7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
- .debug_line    0x0000fda1      0x9cb CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
- .debug_line    0x0001076c      0x31e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_line    0x00010a8a      0xaf9 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_line    0x00011583      0x39b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
- .debug_line    0x0001191e      0x40b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
- .debug_line    0x00011d29      0x352 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_line    0x0001207b      0x301 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
- .debug_line    0x0001237c      0x6b5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_line    0x00012a31      0x562 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_line    0x00012f93      0x286 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
- .debug_line    0x00013219      0x1e1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_line    0x000133fa     0x1b9a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
- .debug_line    0x00014f94       0x9e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
- .debug_line    0x00015032      0x874 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_line    0x000158a6     0x14e7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
- .debug_line    0x00016d8d      0x4ea CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
- .debug_line    0x00017277     0x1118 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_line    0x0001838f      0x39f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- .debug_line    0x0001872e      0x722 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_line    0x00018e50     0x1ec8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_line    0x0001ad18      0xc93 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_line    0x0001b9ab     0x267c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
- .debug_line    0x0001e027      0x71f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
- .debug_line    0x0001e746     0x1048 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_line    0x0001f78e      0xa3e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
- .debug_line    0x000201cc     0x1316 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
- .debug_line    0x000214e2     0x18e2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_line    0x00022dc4     0x1268 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
+.debug_line     0x00000000    0x2404a
+ .debug_line    0x00000000      0xb77 CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
+ .debug_line    0x00000b77      0x4b3 CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+ .debug_line    0x0000102a      0xfdc CMakeFiles/pico_uart_oled.dir/text_ui.c.o
+ .debug_line    0x00002006     0x1b91 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_line    0x00003b97      0x26d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_line    0x00003e04      0x7f0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+ .debug_line    0x000045f4      0x408 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+ .debug_line    0x000049fc      0x388 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_line    0x00004d84     0x16e9 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ .debug_line    0x0000646d      0x258 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+ .debug_line    0x000066c5     0x124e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+ .debug_line    0x00007913      0x3a4 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
+ .debug_line    0x00007cb7     0x318c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ .debug_line    0x0000ae43     0x1d99 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+ .debug_line    0x0000cbdc      0xe81 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
+ .debug_line    0x0000da5d     0x1e9b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_line    0x0000f8f8      0x4c7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+ .debug_line    0x0000fdbf      0x9cb CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_line    0x0001078a      0x31e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_line    0x00010aa8      0xaf9 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_line    0x000115a1      0x39b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+ .debug_line    0x0001193c      0x40b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+ .debug_line    0x00011d47      0x352 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_line    0x00012099      0x301 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_line    0x0001239a      0x6b5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_line    0x00012a4f      0x562 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_line    0x00012fb1      0x286 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_line    0x00013237      0x1e1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_line    0x00013418     0x1b9a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+ .debug_line    0x00014fb2       0x9e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_line    0x00015050      0x874 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_line    0x000158c4     0x14e7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_line    0x00016dab      0x4ea CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+ .debug_line    0x00017295     0x1118 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_line    0x000183ad      0x39f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .debug_line    0x0001874c      0x722 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_line    0x00018e6e     0x1ec8 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_line    0x0001ad36      0xc93 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_line    0x0001b9c9     0x267c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+ .debug_line    0x0001e045      0x71f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_line    0x0001e764     0x1048 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_line    0x0001f7ac      0xa3e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
+ .debug_line    0x000201ea     0x1316 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+ .debug_line    0x00021500     0x18e2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_line    0x00022de2     0x1268 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
 
-.debug_str      0x00000000     0x9bda
- .debug_str     0x00000000     0x9bda CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
-                               0x116a (size before relaxing)
- .debug_str     0x00009bda      0xadc CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
- .debug_str     0x00009bda      0x2c6 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
- .debug_str     0x00009bda      0xd4b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_str     0x00009bda      0x224 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_str     0x00009bda      0x396 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
- .debug_str     0x00009bda      0x341 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
- .debug_str     0x00009bda      0xbee CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_str     0x00009bda      0xc6d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- .debug_str     0x00009bda      0x233 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
- .debug_str     0x00009bda      0x907 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
- .debug_str     0x00009bda      0x307 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
- .debug_str     0x00009bda     0x1329 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- .debug_str     0x00009bda      0xbc1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
- .debug_str     0x00009bda      0xe7d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
- .debug_str     0x00009bda      0xbb0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_str     0x00009bda      0x4ba CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
- .debug_str     0x00009bda      0x75b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
- .debug_str     0x00009bda      0x2e7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_str     0x00009bda      0x983 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_str     0x00009bda      0x2cf CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
- .debug_str     0x00009bda      0x2ad CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
- .debug_str     0x00009bda      0x260 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_str     0x00009bda      0x2b6 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
- .debug_str     0x00009bda     0x123a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_str     0x00009bda      0x502 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_str     0x00009bda      0x25c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
- .debug_str     0x00009bda      0x45f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_str     0x00009bda      0x4cc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
- .debug_str     0x00009bda       0x91 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
- .debug_str     0x00009bda      0x8b5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_str     0x00009bda      0xc6a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
- .debug_str     0x00009bda      0xf7c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
- .debug_str     0x00009bda     0x106f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_str     0x00009bda     0x111e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- .debug_str     0x00009bda      0x2b2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_str     0x00009bda     0x13f0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_str     0x00009bda      0xbe7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_str     0x00009bda     0x1c84 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
- .debug_str     0x00009bda      0x812 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
- .debug_str     0x00009bda     0x1891 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_str     0x00009bda      0xf7f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
- .debug_str     0x00009bda      0xf5b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
- .debug_str     0x00009bda      0x644 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_str     0x00009bda     0x1275 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
+.debug_str      0x00000000     0x9bfb
+ .debug_str     0x00000000     0x9bfb CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
+                               0x1198 (size before relaxing)
+ .debug_str     0x00009bfb      0xadc CMakeFiles/pico_uart_oled.dir/ssd1306.c.o
+ .debug_str     0x00009bfb      0x2c6 CMakeFiles/pico_uart_oled.dir/text_ui.c.o
+ .debug_str     0x00009bfb      0xd4b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_str     0x00009bfb      0x224 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_str     0x00009bfb      0x396 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+ .debug_str     0x00009bfb      0x341 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+ .debug_str     0x00009bfb      0xbee CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_str     0x00009bfb      0xc6d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ .debug_str     0x00009bfb      0x233 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+ .debug_str     0x00009bfb      0x907 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+ .debug_str     0x00009bfb      0x307 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
+ .debug_str     0x00009bfb     0x1329 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ .debug_str     0x00009bfb      0xbc1 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+ .debug_str     0x00009bfb      0xe7d CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
+ .debug_str     0x00009bfb      0xbb0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_str     0x00009bfb      0x4ba CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+ .debug_str     0x00009bfb      0x75b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_str     0x00009bfb      0x2e7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_str     0x00009bfb      0x983 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_str     0x00009bfb      0x2cf CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+ .debug_str     0x00009bfb      0x2ad CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+ .debug_str     0x00009bfb      0x260 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_str     0x00009bfb      0x2b6 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_str     0x00009bfb     0x123a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_str     0x00009bfb      0x502 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_str     0x00009bfb      0x25c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_str     0x00009bfb      0x45f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_str     0x00009bfb      0x4cc CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+ .debug_str     0x00009bfb       0x91 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_str     0x00009bfb      0x8b5 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_str     0x00009bfb      0xc6a CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_str     0x00009bfb      0xf7c CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+ .debug_str     0x00009bfb     0x106f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_str     0x00009bfb     0x111e CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .debug_str     0x00009bfb      0x2b2 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_str     0x00009bfb     0x13f0 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_str     0x00009bfb      0xbe7 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_str     0x00009bfb     0x1c84 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd.c.o
+ .debug_str     0x00009bfb      0x812 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_str     0x00009bfb     0x1891 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_str     0x00009bfb      0xf7f CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/class/vendor/vendor_device.c.o
+ .debug_str     0x00009bfb      0xf5b CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c.o
+ .debug_str     0x00009bfb      0x644 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_str     0x00009bfb     0x1275 CMakeFiles/pico_uart_oled.dir/home/mech/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_i2c/i2c.c.o
 
 .debug_frame    0x00000000     0x3960
  .debug_frame   0x00000000       0x38 CMakeFiles/pico_uart_oled.dir/pico_uart_oled.c.o
