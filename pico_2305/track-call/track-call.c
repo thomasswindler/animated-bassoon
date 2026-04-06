@@ -4,19 +4,21 @@
 #include "hardware/timer.h"
 #include "MECHws2812.h"
 
-#define TC_PIN
-#define RESET_PIN
-#define RED_PIN
-#define YELLOW_PIN
-#define GREEN_PIN
-// Maybe add in WS2812 insted of separate LEDs
-#define RELAY_PIN 
+#define TC_PIN 16
+#define RESET_PIN 17
+// #define RED_PIN
+// #define YELLOW_PIN
+// #define GREEN_PIN
+#define RELAY_PIN 15
 
 volatile bool tc_pressed = false;
 volatile bool reset_pressed = false;
 struct repeating_timer tc_timer;
 struct repeating_timer reset_timer;
 
+void gpio_callback(uint gpio, uint32_t events);
+bool tc_debounce_callback(struct repeating_timer *t);
+bool reset_debounce_callback(struct repeating_timer *t);
 
 void TCinit()
 {
@@ -34,6 +36,7 @@ void TCinit()
     gpio_set_irq_enabled_with_callback(RESET_PIN, GPIO_IRQ_EDGE_FALL, true, &gpio_callback);
 
     // Initialize output pins
+    /*
     gpio_init(RED_PIN);
     gpio_set_dir(RED_PIN, GPIO_OUT);
     gpio_put(RED_PIN, 0);
@@ -45,7 +48,7 @@ void TCinit()
     gpio_init(GREEN_PIN);
     gpio_set_dir(GREEN_PIN, GPIO_OUT);
     gpio_put(GREEN_PIN, 0);
-
+    */
     gpio_init(RELAY_PIN);
     gpio_set_dir(RELAY_PIN, GPIO_OUT);
     gpio_put(RELAY_PIN, 0);
@@ -53,9 +56,9 @@ void TCinit()
 
 void gpio_callback(uint gpio, uint32_t events) {
     if (gpio == TC_PIN) {
-        add_repeating_timer_ms(10, tc_debounce_callback, NULL, &tc_timer);
+        add_repeating_timer_ms(50, tc_debounce_callback, NULL, &tc_timer);
     } else if (gpio == RESET_PIN) {
-        add_repeating_timer_ms(10, reset_debounce_callback, NULL, &reset_timer);
+        add_repeating_timer_ms(50, reset_debounce_callback, NULL, &reset_timer);
     }
 }
 
@@ -73,18 +76,21 @@ bool reset_debounce_callback(struct repeating_timer *t) {
     return false; // don't repeat
 }
 
-void track_call(uint state)
+void track_call(PIO pio, uint sm, uint state)
 {
     switch(state)
     {
         case 0:
-            put_pixel(pio, sm, urgb_u32(0, 0xff, 0)); // Green
-            break:
+            put_pixel(pio, sm, urgb_u32(0xff, 0, 0)); // Green
+            sleep_ms(100);
+            break;
         case 1:
-            put_pixel(pio, sm, urgb_u32(0, 0xff, 0xff)); // Yellow
+            put_pixel(pio, sm, urgb_u32(0x50, 0xff, 0)); // Yellow
+            sleep_ms(100);
             break;
         case 2:
-            put_pixel(pio, sm, urgb_u32(0xff, 0, 0)); // Red
+            put_pixel(pio, sm, urgb_u32(0, 0xff, 0)); // Red
+            sleep_ms(100);
             break;
         default: // When case doesn't equal 0, 1, 2 //Flash white once
             put_pixel(pio, sm, urgb_u32(0, 0, 0));
@@ -97,7 +103,7 @@ void track_call(uint state)
 }
 
 
-
+/*
 int switch_test_main()
 {
     int state = 0;
@@ -147,6 +153,7 @@ int switch_test_main()
         printf("Hello, world!\n");
     }
 }
+*/
 
 void main()
 {
@@ -163,19 +170,21 @@ void main()
     ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
     //
     uint state = 0;
+    track_call(pio, sm, state); // Initialize to state 0
     while (true) {
         if (tc_pressed) { // Only allow TC press if relay is off
             tc_pressed = false;
             // Handle TC button press, e.g., change state
-            if(state < 3) {
-                track_call(state);
+            if (state < 3) {
+                track_call(pio, sm, state);
                 gpio_put(RELAY_PIN, 1);
+                state++;
                 sleep_ms(1000);
                 gpio_put(RELAY_PIN, 0);
-                state++;
+                track_call(pio, sm, state);
             }
-            elif(state >= 3) {
-                track_call(state); // Flash white
+            else if (state >= 3) {
+                track_call(pio, sm, state); // Flash white
             }
         }
 
@@ -185,12 +194,13 @@ void main()
             state = 0;
             put_pixel(pio, sm, urgb_u32(0, 0, 0));
             sleep_ms(100);
-            put_pixel(pio, sm, urgb_u32(0xff, 0, 0)); // Red
+            put_pixel(pio, sm, urgb_u32(0, 0xff, 0)); // Red
             sleep_ms(250);
-            put_pixel(pio, sm, urgb_u32(0, 0xff, 0xff)); // Yellow
+            put_pixel(pio, sm, urgb_u32(0x50, 0xff, 0)); // Yellow
             sleep_ms(250);
-            put_pixel(pio, sm, urgb_u32(0, 0xff, 0)); // Green
+            put_pixel(pio, sm, urgb_u32(0xff, 0, 0)); // Green
             sleep_ms(250);
+            track_call(pio, sm, state);
         }
     }
 

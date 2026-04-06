@@ -46,7 +46,11 @@ pico_enable_stdio_usb(track-call 1)
 
 # Add the standard library to the build
 target_link_libraries(track-call
-        pico_stdlib)
+        pico_stdlib
+        hardware_timer
+        hardware_gpio
+        hardware_pio
+        hardware_clocks)
 
 # Add the standard include files to the build
 target_include_directories(track-call PRIVATE
