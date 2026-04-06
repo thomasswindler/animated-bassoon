@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "hardware/gpio.h"
+#include "hardware/timer.h"
+#include "MECHws2812.h"
 
 #define TC_PIN
 #define RESET_PIN
@@ -7,7 +10,12 @@
 #define YELLOW_PIN
 #define GREEN_PIN
 // Maybe add in WS2812 insted of separate LEDs
-#define RELAY_PIN
+#define RELAY_PIN 
+
+volatile bool tc_pressed = false;
+volatile bool reset_pressed = false;
+struct repeating_timer tc_timer;
+struct repeating_timer reset_timer;
 
 
 void TCinit()
@@ -20,6 +28,10 @@ void TCinit()
     gpio_init(RESET_PIN);
     gpio_set_dir(RESET_PIN, GPIO_IN);
     gpio_pull_up(RESET_PIN);
+
+    // Set up interrupts for button debounce
+    gpio_set_irq_enabled_with_callback(TC_PIN, GPIO_IRQ_EDGE_FALL, true, &gpio_callback);
+    gpio_set_irq_enabled_with_callback(RESET_PIN, GPIO_IRQ_EDGE_FALL, true, &gpio_callback);
 
     // Initialize output pins
     gpio_init(RED_PIN);
@@ -39,7 +51,29 @@ void TCinit()
     gpio_put(RELAY_PIN, 0);
 }
 
-void track_call()
+void gpio_callback(uint gpio, uint32_t events) {
+    if (gpio == TC_PIN) {
+        add_repeating_timer_ms(10, tc_debounce_callback, NULL, &tc_timer);
+    } else if (gpio == RESET_PIN) {
+        add_repeating_timer_ms(10, reset_debounce_callback, NULL, &reset_timer);
+    }
+}
+
+bool tc_debounce_callback(struct repeating_timer *t) {
+    if (!gpio_get(TC_PIN)) { // still low, pressed
+        tc_pressed = true;
+    }
+    return false; // don't repeat
+}
+
+bool reset_debounce_callback(struct repeating_timer *t) {
+    if (!gpio_get(RESET_PIN)) { // still low, pressed
+        reset_pressed = true;
+    }
+    return false; // don't repeat
+}
+
+void track_call(uint state)
 {
     switch(state)
     {
@@ -52,7 +86,12 @@ void track_call()
         case 2:
             put_pixel(pio, sm, urgb_u32(0xff, 0, 0)); // Red
             break;
-        default: // When case doesn't equal 0, 1, 2
+        default: // When case doesn't equal 0, 1, 2 //Flash white once
+            put_pixel(pio, sm, urgb_u32(0, 0, 0));
+            sleep_ms(100);
+            put_pixel(pio, sm, urgb_u32(0xff, 0xff, 0xff));
+            sleep_ms(500);
+            put_pixel(pio, sm, urgb_u32(0, 0, 0));
             break;
     }
 }
@@ -125,9 +164,35 @@ void main()
     //
     uint state = 0;
     while (true) {
-        
-    }    
+        if (tc_pressed) { // Only allow TC press if relay is off
+            tc_pressed = false;
+            // Handle TC button press, e.g., change state
+            if(state < 3) {
+                track_call(state);
+                gpio_put(RELAY_PIN, 1);
+                sleep_ms(1000);
+                gpio_put(RELAY_PIN, 0);
+                state++;
+            }
+            elif(state >= 3) {
+                track_call(state); // Flash white
+            }
+        }
 
+        if (reset_pressed) {
+            reset_pressed = false;
+            // Handle RESET button press, e.g., reset state
+            state = 0;
+            put_pixel(pio, sm, urgb_u32(0, 0, 0));
+            sleep_ms(100);
+            put_pixel(pio, sm, urgb_u32(0xff, 0, 0)); // Red
+            sleep_ms(250);
+            put_pixel(pio, sm, urgb_u32(0, 0xff, 0xff)); // Yellow
+            sleep_ms(250);
+            put_pixel(pio, sm, urgb_u32(0, 0xff, 0)); // Green
+            sleep_ms(250);
+        }
+    }
 
 }
 
