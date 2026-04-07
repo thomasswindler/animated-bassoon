@@ -9,9 +9,7 @@
 #define TC3_PIN 18
 #define TC4_PIN 19
 #define RESET_PIN 20
-// #define RED_PIN
-// #define YELLOW_PIN
-// #define GREEN_PIN
+
 #define RELAY_PIN 15
 
 volatile bool tc1_pressed = false;
@@ -63,19 +61,6 @@ void TCinit()
     gpio_set_irq_enabled_with_callback(RESET_PIN, GPIO_IRQ_EDGE_FALL, true, &gpio_callback);
 
     // Initialize output pins
-    /*
-    gpio_init(RED_PIN);
-    gpio_set_dir(RED_PIN, GPIO_OUT);
-    gpio_put(RED_PIN, 0);
-
-    gpio_init(YELLOW_PIN);
-    gpio_set_dir(YELLOW_PIN, GPIO_OUT);
-    gpio_put(YELLOW_PIN, 0);
-
-    gpio_init(GREEN_PIN);
-    gpio_set_dir(GREEN_PIN, GPIO_OUT);
-    gpio_put(GREEN_PIN, 0);
-    */
     gpio_init(RELAY_PIN);
     gpio_set_dir(RELAY_PIN, GPIO_OUT);
     gpio_put(RELAY_PIN, 0);
@@ -130,84 +115,46 @@ bool reset_debounce_callback(struct repeating_timer *t) {
     return false; // don't repeat
 }
 
-void track_call(PIO pio, uint sm, uint state)
-{
-    switch(state)
-    {
+// Returns the color for a given state
+uint32_t get_state_color(uint state) {
+    switch(state) {
         case 0:
-            put_pixel(pio, sm, urgb_u32(0xff, 0, 0)); // Green
-            sleep_ms(100);
-            break;
+            return urgb_u32(0xff, 0, 0); // Green
         case 1:
-            put_pixel(pio, sm, urgb_u32(0x50, 0xff, 0)); // Yellow
-            sleep_ms(100);
-            break;
+            return urgb_u32(0x50, 0xff, 0); // Yellow
         case 2:
-            put_pixel(pio, sm, urgb_u32(0, 0xff, 0)); // Red
-            sleep_ms(100);
-            break;
-        default: // When case doesn't equal 0, 1, 2 //Flash white once
-            put_pixel(pio, sm, urgb_u32(0, 0, 0));
-            sleep_ms(100);
-            put_pixel(pio, sm, urgb_u32(0xff, 0xff, 0xff));
-            sleep_ms(500);
-            put_pixel(pio, sm, urgb_u32(0, 0, 0));
-            break;
-    }
-}
-
-
-/*
-int switch_test_main()
-{
-    int state = 0;
-    stdio_init_all();
-    TCinit();
-
-    while (true) {
-        switch (state)
-        {
-        case 0:
-            gpio_put(RED_PIN, 1);
-            gpio_put(YELLOW_PIN, 0);
-            gpio_put(GREEN_PIN, 0);
-
-            state++;
-            sleep_ms(1000);
-            break;
-
-        case 1:
-            gpio_put(RED_PIN, 0);
-            gpio_put(YELLOW_PIN, 1);
-            gpio_put(GREEN_PIN, 0);
-
-            state++;
-            sleep_ms(1000);
-            break;
-
-        case 2:
-            gpio_put(RED_PIN, 0);
-            gpio_put(YELLOW_PIN, 0);
-            gpio_put(GREEN_PIN, 1);
-
-            state++;
-            sleep_ms(1000);
-            break;
-
+            return urgb_u32(0, 0xff, 0); // Red
+        case 4:
+            return urgb_u32(0, 0, 0); // Off
+        case 5:
+            return urgb_u32(0xff, 0xff, 0xff); // White (for flashing)
         default:
-            gpio_put(RED_PIN, 0);
-            gpio_put(YELLOW_PIN, 0);
-            gpio_put(GREEN_PIN, 0);
-
-            state = 0;
-            sleep_ms(1000);
-            break;
-        }
-
-        printf("Hello, world!\n");
+            return urgb_u32(0xff, 0xff, 0xff); // White
     }
 }
-*/
+
+// Output colors to all 4 LEDs based on their individual states
+void track_call_all(PIO pio, uint sm, uint state1, uint state2, uint state3, uint state4) {
+    put_pixel(pio, sm, get_state_color(state1)); // LED 1
+    put_pixel(pio, sm, get_state_color(state2)); // LED 2
+    put_pixel(pio, sm, get_state_color(state3)); // LED 3
+    put_pixel(pio, sm, get_state_color(state4)); // LED 4
+    sleep_ms(100);
+}
+
+// Custom version for flashing that doesn't sleep
+void track_call_all_custom(PIO pio, uint sm, uint state1, uint state2, uint state3, uint state4) {
+    put_pixel(pio, sm, get_state_color(state1)); // LED 1
+    put_pixel(pio, sm, get_state_color(state2)); // LED 2
+    put_pixel(pio, sm, get_state_color(state3)); // LED 3
+    put_pixel(pio, sm, get_state_color(state4)); // LED 4
+}
+
+// Legacy function for backward compatibility
+void track_call(PIO pio, uint sm, uint state) {
+    put_pixel(pio, sm, get_state_color(state));
+    sleep_ms(100);
+}
 
 void main()
 {
@@ -222,54 +169,285 @@ void main()
     bool success = pio_claim_free_sm_and_add_program_for_gpio_range(&ws2812_program, &pio, &sm, &offset, WS2812_PIN, 1, true);
     hard_assert(success);
     ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
-    //
-    uint state = 0;
-    track_call(pio, sm, state); // Initialize to state 0
+
+    // State for each LED (independently controlled by each TC button)
+    uint state1 = 0;  // TC1 controls LED 1
+    uint state2 = 0;  // TC2 controls LED 2
+    uint state3 = 0;  // TC3 controls LED 3
+    uint state4 = 0;  // TC4 controls LED 4
+
+    // Initialize all LEDs to state 0
+    track_call_all(pio, sm, state1, state2, state3, state4);
+
     while (true) {
-        if (tc1_pressed) { // TC1 button pressed
+        if (tc1_pressed) { // TC1 button pressed - controls LED 1
             tc1_pressed = false;
-            // Handle TC1 button press
-            if (state < 3) {
-                track_call(pio, sm, state);
+            if (state1 < 2) {
+                track_call_all(pio, sm, state1, state2, state3, state4);
                 gpio_put(RELAY_PIN, 1);
-                state++;
+                state1++;
                 sleep_ms(1000);
                 gpio_put(RELAY_PIN, 0);
-                track_call(pio, sm, state);
+                track_call_all(pio, sm, state1, state2, state3, state4);
             }
-            else if (state >= 3) {
-                track_call(pio, sm, state); // Flash white
+            else if (state1 == 2) {
+                // 3rd press - show red, then flash white twice and turn off
+                track_call_all(pio, sm, state1, state2, state3, state4); // show red
+                gpio_put(RELAY_PIN, 1);
+                sleep_ms(1000);
+                gpio_put(RELAY_PIN, 0);
+                
+                // Flash white twice with 200ms delay and turn off
+                uint temp_state1 = 4; // off
+                uint temp_state2 = (state2 >= 3 && state2 != 4) ? 5 : state2;
+                uint temp_state3 = (state3 >= 3 && state3 != 4) ? 5 : state3;
+                uint temp_state4 = (state4 >= 3 && state4 != 4) ? 5 : state4;
+                
+                // First flash: off -> white -> off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(200);
+                temp_state1 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(200);
+                temp_state1 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(200);
+                
+                // Second flash: off -> white -> off
+                temp_state1 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(200);
+                temp_state1 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                
+                state1 = 4; // Set to "off" state
+            }
+            else {
+                // Flash white once
+                // Create temporary states for flashing
+                uint temp_state1 = 4; // off
+                uint temp_state2 = (state2 >= 3 && state2 != 4) ? 5 : state2;
+                uint temp_state3 = (state3 >= 3 && state3 != 4) ? 5 : state3;
+                uint temp_state4 = (state4 >= 3 && state4 != 4) ? 5 : state4;
+                
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(100);
+                temp_state1 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(500);
+                temp_state1 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
             }
         }
 
-        if (tc2_pressed) { // TC2 button pressed
+        if (tc2_pressed) { // TC2 button pressed - controls LED 2
             tc2_pressed = false;
-            // Handle TC2 button press
+            if (state2 < 2) {
+                track_call_all(pio, sm, state1, state2, state3, state4);
+                gpio_put(RELAY_PIN, 1);
+                state2++;
+                sleep_ms(1000);
+                gpio_put(RELAY_PIN, 0);
+                track_call_all(pio, sm, state1, state2, state3, state4);
+            }
+            else if (state2 == 2) {
+                // 3rd press - show red, then flash white twice and turn off
+                track_call_all(pio, sm, state1, state2, state3, state4); // show red
+                gpio_put(RELAY_PIN, 1);
+                sleep_ms(1000);
+                gpio_put(RELAY_PIN, 0);
+                
+                // Flash white twice with 200ms delay and turn off
+                uint temp_state1 = (state1 >= 3 && state1 != 4) ? 5 : state1;
+                uint temp_state2 = 4; // off
+                uint temp_state3 = (state3 >= 3 && state3 != 4) ? 5 : state3;
+                uint temp_state4 = (state4 >= 3 && state4 != 4) ? 5 : state4;
+                
+                // First flash: off -> white -> off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(200);
+                temp_state2 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(200);
+                temp_state2 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(200);
+                
+                // Second flash: off -> white -> off
+                temp_state2 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(200);
+                temp_state2 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                
+                state2 = 4; // Set to "off" state
+            }
+            else {
+                // Flash white once
+                uint temp_state1 = (state1 >= 3 && state1 != 4) ? 5 : state1;
+                uint temp_state2 = 4; // off
+                uint temp_state3 = (state3 >= 3 && state3 != 4) ? 5 : state3;
+                uint temp_state4 = (state4 >= 3 && state4 != 4) ? 5 : state4;
+                
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(100);
+                temp_state2 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(500);
+                temp_state2 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+            }
         }
 
-        if (tc3_pressed) { // TC3 button pressed
+        if (tc3_pressed) { // TC3 button pressed - controls LED 3
             tc3_pressed = false;
-            // Handle TC3 button press
+            if (state3 < 2) {
+                track_call_all(pio, sm, state1, state2, state3, state4);
+                gpio_put(RELAY_PIN, 1);
+                state3++;
+                sleep_ms(1000);
+                gpio_put(RELAY_PIN, 0);
+                track_call_all(pio, sm, state1, state2, state3, state4);
+            }
+            else if (state3 == 2) {
+                // 3rd press - show red, then flash white twice and turn off
+                track_call_all(pio, sm, state1, state2, state3, state4); // show red
+                gpio_put(RELAY_PIN, 1);
+                sleep_ms(1000);
+                gpio_put(RELAY_PIN, 0);
+                
+                // Flash white twice with 200ms delay and turn off
+                uint temp_state1 = (state1 >= 3 && state1 != 4) ? 5 : state1;
+                uint temp_state2 = (state2 >= 3 && state2 != 4) ? 5 : state2;
+                uint temp_state3 = 4; // off
+                uint temp_state4 = (state4 >= 3 && state4 != 4) ? 5 : state4;
+                
+                // First flash: off -> white -> off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(200);
+                temp_state3 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(200);
+                temp_state3 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(200);
+                
+                // Second flash: off -> white -> off
+                temp_state3 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(200);
+                temp_state3 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                
+                state3 = 4; // Set to "off" state
+            }
+            else {
+                // Flash white once
+                uint temp_state1 = (state1 >= 3 && state1 != 4) ? 5 : state1;
+                uint temp_state2 = (state2 >= 3 && state2 != 4) ? 5 : state2;
+                uint temp_state3 = 4; // off
+                uint temp_state4 = (state4 >= 3 && state4 != 4) ? 5 : state4;
+                
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(100);
+                temp_state3 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(500);
+                temp_state3 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+            }
         }
 
-        if (tc4_pressed) { // TC4 button pressed
+        if (tc4_pressed) { // TC4 button pressed - controls LED 4
             tc4_pressed = false;
-            // Handle TC4 button press
+            if (state4 < 2) {
+                track_call_all(pio, sm, state1, state2, state3, state4);
+                gpio_put(RELAY_PIN, 1);
+                state4++;
+                sleep_ms(1000);
+                gpio_put(RELAY_PIN, 0);
+                track_call_all(pio, sm, state1, state2, state3, state4);
+            }
+            else if (state4 == 2) {
+                // 3rd press - show red, then flash white twice and turn off
+                track_call_all(pio, sm, state1, state2, state3, state4); // show red
+                gpio_put(RELAY_PIN, 1);
+                sleep_ms(1000);
+                gpio_put(RELAY_PIN, 0);
+                
+                // Flash white twice with 200ms delay and turn off
+                uint temp_state1 = (state1 >= 3 && state1 != 4) ? 5 : state1;
+                uint temp_state2 = (state2 >= 3 && state2 != 4) ? 5 : state2;
+                uint temp_state3 = (state3 >= 3 && state3 != 4) ? 5 : state3;
+                uint temp_state4 = 4; // off
+                
+                // First flash: off -> white -> off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(200);
+                temp_state4 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(200);
+                temp_state4 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(200);
+                
+                // Second flash: off -> white -> off
+                temp_state4 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(200);
+                temp_state4 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                
+                state4 = 4; // Set to "off" state
+            }
+            else {
+                // Flash white once
+                uint temp_state1 = (state1 >= 3 && state1 != 4) ? 5 : state1;
+                uint temp_state2 = (state2 >= 3 && state2 != 4) ? 5 : state2;
+                uint temp_state3 = (state3 >= 3 && state3 != 4) ? 5 : state3;
+                uint temp_state4 = 4; // off
+                
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+                sleep_ms(100);
+                temp_state4 = 5; // white
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // white
+                sleep_ms(500);
+                temp_state4 = 4; // off
+                track_call_all_custom(pio, sm, temp_state1, temp_state2, temp_state3, temp_state4); // off
+            }
         }
 
         if (reset_pressed) {
             reset_pressed = false;
-            // Handle RESET button press, e.g., reset state
-            state = 0;
-            put_pixel(pio, sm, urgb_u32(0, 0, 0));
-            sleep_ms(100);
-            put_pixel(pio, sm, urgb_u32(0, 0xff, 0)); // Red
+            // Handle RESET button press - reset all LEDs to state 0
+            state1 = 0;
+            state2 = 0;
+            state3 = 0;
+            state4 = 0;
+            
+            // Animation on reset - cycle all LEDs from red to yellow to green
+            // Red
+            put_pixel(pio, sm, urgb_u32(0, 0xff, 0));
+            put_pixel(pio, sm, urgb_u32(0, 0xff, 0));
+            put_pixel(pio, sm, urgb_u32(0, 0xff, 0));
+            put_pixel(pio, sm, urgb_u32(0, 0xff, 0));
             sleep_ms(250);
-            put_pixel(pio, sm, urgb_u32(0x50, 0xff, 0)); // Yellow
+            
+            // Yellow
+            put_pixel(pio, sm, urgb_u32(0x50, 0xff, 0));
+            put_pixel(pio, sm, urgb_u32(0x50, 0xff, 0));
+            put_pixel(pio, sm, urgb_u32(0x50, 0xff, 0));
+            put_pixel(pio, sm, urgb_u32(0x50, 0xff, 0));
             sleep_ms(250);
-            put_pixel(pio, sm, urgb_u32(0xff, 0, 0)); // Green
+            
+            // Green
+            put_pixel(pio, sm, urgb_u32(0xff, 0, 0));
+            put_pixel(pio, sm, urgb_u32(0xff, 0, 0));
+            put_pixel(pio, sm, urgb_u32(0xff, 0, 0));
+            put_pixel(pio, sm, urgb_u32(0xff, 0, 0));
             sleep_ms(250);
-            track_call(pio, sm, state);
+            
+            track_call_all(pio, sm, state1, state2, state3, state4);
         }
     }
 
@@ -359,6 +537,80 @@ int ws2812_main() { //ws2812_main() --- IGNORE ---
         sleep_ms(1000);
         put_pixel(pio, sm, urgb_u32(0xff, 0xff, 0xff));
         sleep_ms(1000);    
+    }
+
+    // This will free resources and unload our program
+    pio_remove_program_and_unclaim_sm(&ws2812_program, pio, sm, offset);
+}
+
+int test_4_leds_main() { //test_4_leds_
+    stdio_init_all();
+    printf("WS2812 4-LED Test\n");
+    printf("Testing 4 separate WS2812 LEDs with different colors\n\n");
+
+    // Initialize WS2812 LEDs
+    PIO pio;
+    uint sm;
+    uint offset;
+
+    bool success = pio_claim_free_sm_and_add_program_for_gpio_range(&ws2812_program, &pio, &sm, &offset, WS2812_PIN, 1, true);
+    hard_assert(success);
+
+    ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
+
+    // Test pattern: cycle through colors on each LED
+    while (true) {
+        // Pattern 1: Each LED a different color
+        printf("Pattern 1: Individual colors (Red, Green, Blue, White)\n");
+        put_pixel(pio, sm, urgb_u32(0xff, 0, 0));    // LED 1: Red
+        put_pixel(pio, sm, urgb_u32(0, 0xff, 0));    // LED 2: Green
+        put_pixel(pio, sm, urgb_u32(0, 0, 0xff));    // LED 3: Blue
+        put_pixel(pio, sm, urgb_u32(0xff, 0xff, 0xff)); // LED 4: White
+        sleep_ms(2000);
+
+        // Pattern 2: Rainbow-like sequence
+        printf("Pattern 2: Rainbow sequence\n");
+        put_pixel(pio, sm, urgb_u32(0xff, 0, 0));    // Red
+        put_pixel(pio, sm, urgb_u32(0xff, 0xff, 0)); // Yellow
+        put_pixel(pio, sm, urgb_u32(0, 0xff, 0));    // Green
+        put_pixel(pio, sm, urgb_u32(0, 0xff, 0xff)); // Cyan
+        sleep_ms(2000);
+
+        // Pattern 3: Each LED lights individually, then all on
+        printf("Pattern 3: Sequential individual LED test\n");
+        for (int led = 0; led < 4; led++) {
+            // Turn off all LEDs
+            for (int i = 0; i < 4; i++) {
+                put_pixel(pio, sm, urgb_u32(0, 0, 0));
+            }
+            sleep_ms(500);
+
+            // Turn on one LED at a time (red)
+            for (int i = 0; i < 4; i++) {
+                if (i == led) {
+                    put_pixel(pio, sm, urgb_u32(0xff, 0, 0)); // Red
+                } else {
+                    put_pixel(pio, sm, urgb_u32(0, 0, 0));    // Off
+                }
+            }
+            sleep_ms(500);
+        }
+
+        // Pattern 4: Brightness test - different intensities of green
+        printf("Pattern 4: Brightness levels (Green)\n");
+        put_pixel(pio, sm, urgb_u32(0x20, 0, 0));    // LED 1: Dim green
+        put_pixel(pio, sm, urgb_u32(0x80, 0, 0));    // LED 2: Medium green
+        put_pixel(pio, sm, urgb_u32(0xC0, 0, 0));    // LED 3: Bright green
+        put_pixel(pio, sm, urgb_u32(0xff, 0, 0));    // LED 4: Full green
+        sleep_ms(2000);
+
+        // Pattern 5: All off
+        printf("Pattern 5: All LEDs off\n");
+        put_pixel(pio, sm, urgb_u32(0, 0, 0));
+        put_pixel(pio, sm, urgb_u32(0, 0, 0));
+        put_pixel(pio, sm, urgb_u32(0, 0, 0));
+        put_pixel(pio, sm, urgb_u32(0, 0, 0));
+        sleep_ms(1000);
     }
 
     // This will free resources and unload our program
