@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main() {
-    // stdio_init_all(); // Not needed for slave
+    stdio_init_all();
 
     spi_init(spi0, 1 * 1000 * 1000);
     spi_set_slave(spi0, true);
@@ -17,6 +17,7 @@ int main() {
 
     while (true) {
         spi_read_blocking(spi0, tx, &rx, 1);
+        printf("Slave: sent %02X, received %02X\n", tx, rx);
         tx = rx; // echo what we received
     }
 }
