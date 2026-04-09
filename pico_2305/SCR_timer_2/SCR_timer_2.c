@@ -11,6 +11,9 @@ APR2024 Changes (DWF):  Renamed variables and defines to be more clear
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
+#include "hardware/irq.h"
+#include "hardware/gpio.h"
+#include "hardware/timer.h"
 
 #define GATE_OUTPIN 2     // goes high after delay when interreupt goes low
 #define INTERRUPT_INPIN 4 // Goes low when the AC signal is on the positive cycle
